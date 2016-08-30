@@ -1,0 +1,134 @@
+body {
+	font-size: 16px;
+	color: #fff;
+	/* background-color: #99ccff; */
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;  
+}
+
+/** HEADER **/
+#header-nav {
+	/* background-color: #c3eee7; -- only for testing purpose */
+	background-color: white;
+	border-radius: 0;
+	border: 0;
+	box-shadow: 0px 2px 2px #888888;
+}
+#logo-img {
+	background: url('../images/medobal-logo.png') no-repeat;
+	width: 200px;
+	height: 47px;
+	margin: 20px 20px 10px 10px;
+}
+#nav-list {
+	margin-top: 20px;
+}
+#nav-list a {
+	color: black; 
+	text-align: center;
+}
+#nav-list a:hover {
+	background-color: #c3eee7; /* -- only for testing purpose */
+}
+.navbar.navbar-default {
+	margin-bottom: 0px;
+}
+/*
+#nav-list a span {
+	font-size: 1.8em;
+}*/
+/*
+#phone {
+	margin-top: 5px;
+}
+#phone a { 
+	text-align: right;
+	padding-bottom: 0;
+} */
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+	border: 1px solid #99ccff; /* change the color afterwards*/
+}
+/* do i need this???
+.navebar-header button.navbar-toggle {
+	clear: both;
+}
+*/
+/** END HEADER **/
+
+/** HOME PAGE **/
+#main-content {
+	background-color: #00639a;
+}
+
+
+h1.why-medobal {
+	position: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	
+}
+.container {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.container .jumbotron {
+	margin: 0px;
+
+}
+
+/** END HOME PAGE **/
+
+
+/********* Large devices only *********/
+@media (min-width: 1200px) {
+	/* Home Page */
+	.container .jumbotron {
+		background: url('../images/Jumbotron_1200.png') no-repeat;
+		height: 376px;
+
+	}
+	/* End Home Page */
+}
+
+/********* Medium devices only *********/
+@media (min-width: 992px) and (max-width: 1199px) {
+	/* Home Page */
+	.container .jumbotron {
+		background: url('../images/Jumbotron_992.png') no-repeat;
+		height: 311px;
+    }
+    /* End Home Page */
+	
+}
+
+/********* Small devices only *********/
+@media (min-width: 768px) and (max-width: 991px) {
+	/* Home Page */
+	.container .jumbotron {
+		background: url('../images/Jumbotron_768.png') no-repeat;
+		height: 241px;
+
+    }
+    /* End Home Page */
+	
+}
+
+/********* Extra small devices only *********/
+@media (max-width: 767px) {
+	/* Header */
+	#logo-img {
+	background: url('../images/medobal-logo.png') no-repeat;
+	width: 200px;
+	height: 47px;
+	margin: 20px 20px 10px 30px;
+}
+	/* End Header */
+
+	/* Home Page */
+	.container .jumbotron {
+		padding: 0px;
+    }
+    /* End Home Page */
+
+}
