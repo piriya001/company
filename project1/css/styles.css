@@ -48,35 +48,109 @@ body {
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
 	border: 1px solid #99ccff; /* change the color afterwards*/
 }
-/* do i need this???
+/* do i need this??? 
 .navebar-header button.navbar-toggle {
 	clear: both;
 }
 */
+
 /** END HEADER **/
+
+/** FOOTER **/
+.panel-footer {
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #333;
+	border-top: 0;
+}
+.panel-footer div.row {
+	margin-bottom: 35px;
+}
+#home, #about_us, #services, #accounts {
+	line-height: 1.5;
+}
+#home > span, #about_us > span, #services > span, #accounts > span {
+	font-size: 1.3em;
+	color: rgb(0, 160, 255);
+}
+
+
+/** END FOOTER **/
 
 /** HOME PAGE **/
 #main-content {
 	background-color: #00639a;
 }
-
-
-h1.why-medobal {
+h1.why-medobal-heading {
+	color: white;
 	position: center;
 	padding-top: 10px;
 	padding-bottom: 20px;
-	
 }
 .container {
 	padding-right: 0px;
 	padding-left: 0px;
 }
-
 .container .jumbotron {
 	margin: 0px;
 
 }
-
+h1.treatment-heading {
+	color: #00639a;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#treatment-tiles {
+	background-color: white;
+}
+#caridology-tile, #cosmetic-tile, #dentistry-tile, #fertility-tile, #orthopedics-tile, #ophthalmology-tile {
+	height: 250px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+	border: 1.5px solid black;
+	overflow: hidden;
+}
+#caridology-tile:hover, #cosmetic-tile:hover, #dentistry-tile:hover, #fertility-tile:hover, #orthopedics-tile:hover, #ophthalmology-tile:hover {
+	box-shadow: 0 1px 5px 1px #00639a;
+}
+#caridology-tile {
+	background: url('../images/cardiology-tile.png') no-repeat;
+	background-position: center;
+}
+#cosmetic-tile {
+	background: url('../images/cosmetic-tile.png') no-repeat;
+	background-position: center;
+}
+#dentistry-tile {
+	background: url('../images/dentistry-tile.png') no-repeat;
+	background-position: center;
+} 
+#fertility-tile {
+	background: url('../images/fertility-tile.png') no-repeat;
+	background-position: center;
+} 
+#orthopedics-tile {
+	background: url('../images/orthopedics-tile.png') no-repeat;
+	background-position: center;
+} 
+#ophthalmology-tile {
+	background: url('../images/ophthalmology-tile.png') no-repeat;
+	background-position: center;
+}
+#caridology-tile span, #cosmetic-tile span, #dentistry-tile span, #fertility-tile span, #orthopedics-tile span, #ophthalmology-tile span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: 0.5;
+}
 /** END HOME PAGE **/
 
 
@@ -125,10 +199,54 @@ h1.why-medobal {
 }
 	/* End Header */
 
+	/* Footer */
+	.panel-footer section {
+		margin-bottom: 30px;
+		/* text-align: center; -- not needed, as i have specified text align center in the body already*/
+	}
+	.panel-footer section:nth-child(4) {
+		margin-bottom: 0;
+	}
+	.panel-footer section hr {
+		width: 75%;
+	}
+	/* End Footer */
+
+
 	/* Home Page */
 	.container .jumbotron {
 		padding: 0px;
     }
+
+    #caridology-tile, #cosmetic-tile, #dentistry-tile, #fertility-tile, #orthopedics-tile, #ophthalmology-tile {
+	/* in xs browser, the tiles wont take the wull width and the border of it will adjusted to the tile size */
+	width: 400px;
+	margin: 0 auto 15px;
+	}
     /* End Home Page */
 
 }
+
+/********* Super extra small devices only :-) (e.g. IPhone 4) *********/
+@media (max-width: 479px) { 
+	/* Home page */
+	#caridology-tile, #cosmetic-tile, #dentistry-tile, #fertility-tile, #orthopedics-tile, #ophthalmology-tile {
+	/* in super extra small browser, the tiles wont take the wull width and the border of it will adjusted to the tile size */
+	width: 280px;
+	margin: 0 auto 15px;
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
