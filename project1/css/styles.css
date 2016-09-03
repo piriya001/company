@@ -1,5 +1,5 @@
 body {
-	font-size: 16px;
+	/*font-size: 16px; */
 	color: #fff;
 	/* background-color: #99ccff; */
 	font-family: Arial, Helvetica, sans-serif;
@@ -153,6 +153,86 @@ h1.treatment-heading {
 }
 /** END HOME PAGE **/
 
+/* CARDIOLOGY PAGE */
+.ablation-tile {
+	position: relative;
+	border: 2px solid black;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 15px;
+}
+
+.ablation-tile span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: 0.6;
+}
+.ablation-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+#cardiology-title + div {
+	margin-bottom: 50px;
+}
+/* END CARDIOLOGIY PAGE */
+
+/*ABLATION PAGE*/
+.menu-ablation-tile {
+	margin-bottom: 25px;
+}
+.menu-ablation-tile hr{
+	width: 80%;
+}
+.menu-ablation-tile .ablation-item-price {
+	font-size: 1.1em;
+	text-align: right;
+	margin-top: -15px;
+	margin-right: -15px;
+}
+.menu-ablation-tile .ablation-item-price span {
+	font-size: .6em; 
+}
+.ablation-item-photo {
+	position: relative;
+	border: 2px solid black;
+	overflow: hidden;
+	padding-bottom: 0;
+	margin-right: -15px;
+	margin-left: auto;
+	margin-bottom: 20px;
+	max-width: 250px;
+	max-height: 150px;
+}
+
+.ablation-item-photo div {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 80px;
+	background-color: #333;
+	text-align: center;
+}
+.ablation-item-description {
+	text-align: left;
+	padding-right: 30px;
+}
+h3.ablation-item-title {
+	margin: 0 0 10px;
+}
+.ablation-item-details {
+	font-size: .9em;
+	font-style: italic;
+}
+/* END ABLATION PAGE */
+
+
 
 /********* Large devices only *********/
 @media (min-width: 1200px) {
@@ -225,6 +305,16 @@ h1.treatment-heading {
 	}
     /* End Home Page */
 
+    .ablation-item-photo {
+    	margin-right: auto;
+    }
+    .menu-ablation-tile .ablation-item-price {
+    	text-align: center;
+    }
+    .ablation-item-description {
+    	text-align: center;
+    }
+
 }
 
 /********* Super extra small devices only :-) (e.g. IPhone 4) *********/
@@ -236,7 +326,14 @@ h1.treatment-heading {
 	margin: 0 auto 15px;
 	}
 
-
+	.col-xxs-12 {
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left;
+		width: 100%;
+	}
 
 }
 
