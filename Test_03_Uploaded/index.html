@@ -3,6 +3,7 @@
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
+
 <html lang="en">
     <!--<![endif]--><head>
         <!-- Title -->
@@ -273,7 +274,9 @@
                             <!-- Enquiry Item -->
                             <head>
 <title>Enquiry</title>
-    <form class="form-basic" name="enquiry" form method="post" action="send.php">
+    <?php include('send.php') ?>
+
+    <form class="form-basic" name="enquiry" action="send.php" method="post" > 
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-basic.css">
@@ -615,7 +618,7 @@
             <div class="form-row">
             
             <div align="center">
-              <button type="submit" value="Submit">Submit</button> 
+              <input id="submit_button" name="submit" type="submit" value="Submit"></input> 
               </div>
             </div>
 
