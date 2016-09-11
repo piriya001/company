@@ -4,10 +4,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   document.querySelector("#submit_button").addEventListener("click",
       function (event) {
-          confirm("Thank you!");
+          confirm("Thank you");
       }
     );
-
   }
 );
 
