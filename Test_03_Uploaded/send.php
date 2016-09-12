@@ -20,5 +20,6 @@ $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 //echo "Thank You for your enquiry!" . " -" . "<a href='index.html' style='text-decoration:none;color:#ff0099;'> CLICK HERE to continue</a>";
 }
-
+$previousPage = $_SERVER["HTTP_REFERER"];
+header('Location: '.$previousPage);
 ?>
