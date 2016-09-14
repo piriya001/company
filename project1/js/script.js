@@ -25,14 +25,14 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 
 
 
-	//IIFE
+//IIFE
 (function (global) {
 
 	var dc = {}; //namespace
 
 	var homeHtml = "snippets/home-snippet.html"; //setting up homeHtml, just the URL as to where the snippet is going to sit
 	var allCardiologyCategoriesUrl = "https://piriya001.github.io/company/project1/data/cardiologyCategories.json"; // URL where you can get the JSON from our server side
-	var cardiologyTitleHtml = "snippets/cardiology-tilte-snippet.html";
+	var cardiologyTitleHtml = "snippets/cardiology-title-snippet.html";
 	var cardiologyHtml = "snippets/cardiology-snippet.html";
 
 	//Convenience function for inserting innner HTML for 'select'
@@ -106,7 +106,7 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 							buildCardiologyViewHtml(cardiologyCategories,
 													cardiologyTitleHtml,
 													cardiologyHtml);
-							insertHtml("main-content", cardiologyViewHtml);
+							insertHtml("#main-content", cardiologyViewHtml);
 					},
 					false);
 			},
