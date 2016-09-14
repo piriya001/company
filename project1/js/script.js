@@ -31,7 +31,7 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	var dc = {}; //namespace
 
 	var homeHtml = "snippets/home-snippet.html"; //setting up homeHtml, just the URL as to where the snippet is going to sit
-	var allCardiologyUrl = "https://piriya001.github.io/company/project1/data/cardiologyCategories.json"; // URL where you can get the JSON from our server side
+	var allCardiologyCategoriesUrl = "https://piriya001.github.io/company/project1/data/cardiologyCategories.json"; // URL where you can get the JSON from our server side
 	var cardiologyTitleHtml = "snippets/cardiology-tilte-snippet.html";
 	var cardiologyHtml = "snippets/cardiology-snippet.html";
 
@@ -87,7 +87,7 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	dc.loadCardiologyCategories = function () {
 		showLoading("#main-content");
 		$ajaxUtils.sendGetRequest(
-			allCardiologyUrl,
+			allCardiologyCategoriesUrl,
 			buildAndShowCardiologyHTML);
 	};
 
@@ -120,7 +120,7 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 									cardiologyHtml) {
 
 		var finalHtml = cardiologyTitleHtml;
-		finalHtml += "section class='row'>";
+		finalHtml += "<section class='row'>";
 
 		//Loop over categories
 		for (var i = 0; i < cardiologyCategories.length; i++) {
