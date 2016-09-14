@@ -31,6 +31,9 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	var dc = {}; //namespace
 
 	var homeHtml = "snippets/home-snippet.html"; //setting up homeHtml, just the URL as to where the snippet is going to sit
+	var allCardiologyUrl = "https://piriya001.github.io/company/project1/data/cardiologyCategories.json"; // URL where you can get the JSON from our server side
+	var cardiologyTitleHtml = "snippets/cardiology-tilte-snippet.html";
+	var cardiologyHtml = "snippets/cardiology-snippet.html";
 
 	//Convenience function for inserting innner HTML for 'select'
 	// ==> convenience method, so we dont have to write this from scratch every time because we are goint to have to do this several times. 
@@ -52,6 +55,16 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 		insertHtml(selector, html);
 	};
 
+	//Return substitute of '{{propName}}'
+	//with propValue in given 'string'
+	var insertProperty = function (string, propName, propValue) {
+		var propToReplace = "{{" + propName + "}}";
+		string = string
+			.replace(new RegExp(propToReplace, "g"), propValue);
+		return string;
+	}
+
+
 	//On page load (before images or CSS)
 	document.addEventListener("DOMContentLoaded", function (event) {
 
@@ -69,7 +82,91 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 		false); // false means ==> no JSON.. because it is just an HTML snippet
 	});
 
+
+	//Load the Cardiology categories view
+	dc.loadCardiologyCategories = function () {
+		showLoading("#main-content");
+		$ajaxUtils.sendGetRequest(
+			allCardiologyUrl,
+			buildAndShowCardiologyHTML);
+	};
+
+	//Builds HTML for the cardiology categories page based on the data
+	//from the server
+	function buildAndShowCardiologyHTML (cardiologyCategories) {
+		//Load title snippet of cardiology categories page
+		$ajaxUtils.sendGetRequest(
+			cardiologyTitleHtml,
+			function (cardiologyTitleHtml) {
+				//Retrieve single cardiology category snippet
+				$ajaxUtils.sendGetRequest(
+					cardiologyHtml,
+					function (cardiologyHtml) {
+						var cardiologyViewHtml =
+							buildCardiologyViewHtml(cardiologyCategories,
+													cardiologyTitleHtml,
+													cardiologyHtml);
+							insertHtml("main-content", cardiologyViewHtml);
+					},
+					false);
+			},
+			false);
+	}
+
+	//Using cardiology categories data and snippets html
+	//build cardiology categories vies HTML to be inserted into page
+	function buildCardiologyViewHtml(cardiologyCategories,
+									cardiologyTitleHtml,
+									cardiologyHtml) {
+
+		var finalHtml = cardiologyTitleHtml;
+		finalHtml += "section class='row'>";
+
+		//Loop over categories
+		for (var i = 0; i < cardiologyCategories.length; i++) {
+			//insert category values
+			var html = cardiologyHtml;
+			var name = "" + cardiologyCategories[i].name;
+			var short_name = cardiologyCategories[i].short_name;
+			html =
+				insertProperty(html, "name", name);
+			html =
+				insertProperty(html,
+								"short_name",
+								short_name);
+			finalHtml += html;
+		}
+
+		finalHtml += "</section>";
+		return finalHtml;
+	}
+
+
+
 	global.$dc = dc; // Whatever we attach to the dc as a property is going to get exposed to the gloabal object in order for us to use it in some other page or some other script
 
 })(window);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
