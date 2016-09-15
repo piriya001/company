@@ -34,6 +34,9 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	var allCardiologyCategoriesUrl = "https://piriya001.github.io/company/project1/data/cardiologyCategories.json"; // URL where you can get the JSON from our server side
 	var cardiologyTitleHtml = "snippets/cardiology-title-snippet.html";
 	var cardiologyHtml = "snippets/cardiology-snippet.html";
+	var cardiologyItemsUrl = "https://piriya001.github.io/company/project1/data/cardiology-items.json?cardiologyCategories=";
+	var cardiologyItemsTitleHtml = "cardiology-items-title.html";
+	var cardiologyItemHtml = "cardiology-item.html";
 
 	//Convenience function for inserting innner HTML for 'select'
 	// ==> convenience method, so we dont have to write this from scratch every time because we are goint to have to do this several times. 
@@ -57,6 +60,13 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 
 	//Return substitute of '{{propName}}'
 	//with propValue in given 'string'
+	// ==> Somehow we are going to grab cardiology-snippet.html as a string, we are going to grab htat using Ajax request and then, we have this entire HTML as a sting.
+	// ==> Then we need to substitue every property that has double curly braces around it with a value. The function insertProperty is going to do this.
+	// ==> I am asking for a string, the PropName and PropValue. And it is going to return a string already with those property values inserted, instead of the property names there.
+	// ==> We are going to use a replace function of the string class and user a regular expression. It's just going to be the property to replace that property that we have set up (propToReplace).
+	// ==> We want that replaced. And the only use we are using this regular expression is because we want to specify this flat g, which tells us to go ahead and replace it everywhere you fing in the string here.
+	// ==> So, not just the first place you find, but everywhere you find.... propToReplace is going to be replaces with propValue
+	// ==> Wo this is how we are going to  take the string, the snippet, and we can populate it with property values.
 	var insertProperty = function (string, propName, propValue) {
 		var propToReplace = "{{" + propName + "}}";
 		string = string
@@ -84,15 +94,43 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 
 
 	//Load the Cardiology categories view
+	// ==> Our LoadCardiologyCategories function is going to get triggered in order to pull all these categories into the page.
+	// ==> First we are going to show our loading icon, and usually on these sites the server is going to be fast enough that you probably not even going to notice that
+	// ==> loading icon kind of flashing and going away. But if the sides get a little slower or the data comes back a little slower, you will eventually see it.
+	// ==> We are making our Ajax request afterward and we're using our AllCardiologyCategoriesURL, that's URL to github, and we're passing buildAndShowCardiologyHTML, 
+	// ==> that is a value of a function that is defined below... And since we dont really need the true, it is default, which is going to go ahead and leave it off, which
+	// ==> means that the function below, buildAndShowCardiologyHTML, will get cardiologyCategories, is going to be an object that is converted from the JSON string.
+	// ==> So once this Ajax call is done and this function is calles, we end up in buildAndShowCardiologyHTML function below. 
 	dc.loadCardiologyCategories = function () {
 		showLoading("#main-content");
 		$ajaxUtils.sendGetRequest(
 			allCardiologyCategoriesUrl,
-			buildAndShowCardiologyHTML);
+			buildAndShowCardiologyHTML); // we dont need the true right here, as it is default.
 	};
 
-	//Builds HTML for the cardiology categories page based on the data
-	//from the server
+
+	// Load the cardiology items view
+	// 'cardiologyCategoryShort' is a short_name for a cardiologycategory
+	dc.loadCardiologyItems = function (cardiologyCategoryShort) {
+		showLoading("#main-content");
+		$ajaxUtils.sendGetRequest(
+			cardiologyItemsUrl + cardiologyCategoryShort,
+			buildAndShowCardiologyItemsHTML);
+	};
+
+
+
+	//Builds HTML for the cardiology categories page based on the data from the server
+	// ==> First, we need to go ahead and request the cardiology's title HTML, cardiologyTitleHtml. That is htat snippet of HTML that juts gets the Title of the cardiology category,
+	// ==> and we need that string in order to append it to the rest of it. So once we get that string, I'm not ready to do mush with it yet. We need to make yet another Ajax request and
+	// ==> notice that that Ajax request is sitting inside the one before. Because it only makes sense to make the second one when the first one is actually over and where in the context such that
+	// ==> we could grab the result of the first one, means the cardiologyTitleHtml. We are making the following Ajax request to get the cardiologyHtml and that's that snippet, cardiology-snippet.html.
+	// ==> And once we are done, we have all three pieces of data that we need. We have the cardiology Categories object that lists all the cardiology categories. We have the title of the page, the snippet of the
+	// ==> title of the page as a string and we have a single cardiologyHtml snippet that we could now use, so all we need to to now is maybe call some function like buildCardiologyViewHtml. So now we actually
+	// ==> buikding the view. Pass it the cardiologyCategories object, pass it our title snippet cardiologyTitleHtml, and pass it our actual cardiology category snippet cardiologyHtml. We are
+	// ==> going to go ahead and build that view, store it inside a variable cardiologyViewHtml. and once we are done with that synchronous call, we are going to use our inserHtml
+	// ==> to place it inside the element with ID main-content and there is that string cardiologyViewHtml that we are placing inside of it. 
+	// ==> And notice, both Ajay calls pass false, because we dont want the Ajax utility to try to process our snippet, our html snippets as JSON.
 	function buildAndShowCardiologyHTML (cardiologyCategories) {
 		//Load title snippet of cardiology categories page
 		$ajaxUtils.sendGetRequest(
@@ -115,6 +153,15 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 
 	//Using cardiology categories data and snippets html
 	//build cardiology categories vies HTML to be inserted into page
+	// ==> buildCardiologyViewHtml it's a simple function. It goes ahead and builds up our final HTML snippet ba grabbing the categories first
+	// ==> Remember we need to put that whole thing into our row, so rememeber that section piece is not really here anymore because it only comes once.
+	// ==> We are inserting a section with a class row and then we are looping over our cardiologyCategories object and every time we pull our the name, the short name,
+	// ==> and all we are doing then is just insertProperty. (Remember that insertProperty function - We insert property and every place where there is a name property inside our snippet,
+	// ==> it gets replaced with the value name, same for short name.) Finally we are done and we are looping over this every single time.
+	// ==> And notice that every time we are copying the cardiologyCategory HTML, that's that snippet that has the properties in it, into HTML, which means we are separating.
+	// ==> This is copied by value (not by reference), which means this is a opy that is not connected to this anymore. So every time through the loop, we get a new copy of it right here and then
+	// ==> we can insert the new values to it it once again. And once we are done, we ust return our final HTML that's built up, we close the section tag. Then it goes back to cardiologyViewHtml in 
+	// ==> buildAndShowCardiologyHTML function and just inserts that inside our main content.
 	function buildCardiologyViewHtml(cardiologyCategories,
 									cardiologyTitleHtml,
 									cardiologyHtml) {
@@ -140,6 +187,122 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 		finalHtml += "</section>";
 		return finalHtml;
 	}
+
+
+	// Builds HTML for the single cardiology category page based on the data from the server
+	function buildAndShowCardiologyItemsHTML (CardiologyCategoryItems) {
+		//Load title snippet of cardiology items page
+		$ajaxUtils.sendGetRequest(
+			cardiologyItemsTitleHtml,
+			function (cardiologyItemsTitleHtml) {
+				//Retrieve single category item snippet
+				$ajaxUtils.sendGetRequest(
+					cardiologyItemHtml,
+					function (cardiologyItemHtml) {
+						var CardiologyItemsViewHtml =
+							buildCardiologyItemsViewHTML(CardiologyCategoryItems,
+														 cardiologyItemsTitleHtml,
+														 cardiologyItemHtml);
+							insertHtml("#main-content", CardiologyItemsViewHtml);
+				},
+				false);
+		},
+		false);
+	}
+
+	// Using Cardiology categories and Cardiology items data and snippets html
+	// Build cardiology items view HTML to be inserted into page
+	function buildCardiologyItemsViewHTML(CardiologyCategoryItems,
+										  cardiologyItemsTitleHtml,
+										  cardiologyItemHtml) {
+
+		cardiologyItemsTitleHtml = 
+			insertProperty(cardiologyItemsTitleHtml,
+							"name", 
+							CardiologyCategoryItems.category.name);
+		cardiologyItemsTitleHtml = 
+			insertProperty(cardiologyItemsTitleHtml,
+							"special_category", 
+							CardiologyCategoryItems.category.special_category);	
+
+		var finalHtml = cardiologyItemsTitleHtml;
+		finalHtml += "<section class='row'>";
+
+		//Loop over cardiology items
+		var cardiologyItems = CardiologyCategoryItems.cardiology_items;
+		var cCatShortName = CardiologyCategoryItems.category.short_name;
+		for (var i = 0; i < cardiologyItems.length; i++) {
+			// insert category items values
+			var html = cardiologyItemHtml;
+			html = 
+				insertProperty(html, "short_name", cardiologyItems[i].short_name);
+			html = 
+				insertProperty(html, "cCatShortName", cCatShortName);
+
+			html = 
+				insertItemPrice(html,
+								"price_small",
+								cardiologyItems[i].price_small);
+			html = 
+				insertItemPortionName(html,
+								"small_portion_name",
+								cardiologyItems[i].small_portion_name);
+			html = 
+				insertItemPrice(html,
+								"price_large",
+								cardiologyItems[i].price_large);
+			html = 
+				insertItemPortionName(html,
+								"large_portion_name",
+								cardiologyItems[i].large_portion_name);
+			html =
+				insertProperty(html,
+								"name",
+								cardiologyItems[i].name);
+			html =
+				insertProperty(html,
+								"description",
+								cardiologyItems[i].description);
+
+			// Add clearfix after every second cardiology item
+			if (i % 2 != 0) {
+				html +=
+					"<div class='clearfix visible-lg-block visible-md-block'></div>";
+			}
+
+			finalHtml += html;
+		}
+
+		finalHtml += "</section>";
+		return finalHtml;
+	}
+
+	// Appends price with '$' if price exists
+	function insertItemPrice(html, pricePropName, priceValue) {
+		// If not specified, replace with empty string
+		if (!priceValue) {
+			return insertProperty(html, pricePropName, "");
+		}
+
+		priceValue = "$" + priceValue.toFixed(2);
+		html = insertProperty(html, pricePropName, priceValue);
+		return html;
+	}
+
+	// Appends protion name in parens if it exists
+	function insertItemPortionName(html, portionPropName, portionValue){
+		// If not specified, return original string
+		if (!portionValue) {
+			return insertProperty(html, portionPropName, "");
+		}
+
+		portionValue = "(" + portionValue + ")";
+		html = insertProperty(html, portionPropName, portionValue);
+		return html;
+	}
+
+
+
 
 
 
