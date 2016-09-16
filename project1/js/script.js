@@ -22,9 +22,6 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 
 
 
-
-
-
 //IIFE
 (function (global) {
 
@@ -75,6 +72,24 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	}
 
 
+	//Remove the class 'active' from home and swith to Cardiology button
+	var switchCardiologyToActive = function () {
+		// Remove 'active' from home button
+		var classes = document.querySelector("#navHomeButton").className; // We are getting the class name. and the class name is not on class name, its really just the class attribute and the class attribute can have many classes.
+		classes = classes.replace(new RegExp("active", "g"), "");
+		document.querySelector("#navHomeButton").className = classes;
+
+		// Add 'active' to menu button if not already there
+		classes = document.querySelector("#navCardiologyButton").className; // grabbing the classnames inside the navCardiologyButton
+		if (classes.indexOf("active") == -1) { 		// this function indexOf returns -1, if it cannot find the string inside the string that you are applying this method on.
+			classes += " active";
+			document.querySelector("#navCardiologyButton").className = classes;
+		}
+	};
+
+
+
+
 	//On page load (before images or CSS)
 	document.addEventListener("DOMContentLoaded", function (event) {
 
@@ -111,11 +126,14 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 
 	// Load the cardiology items view
 	// 'cardiologyCategoryShort' is a short_name for a cardiologycategory
+	// ==> It's basically almost the same as dc.loadCardiologyCategories, except that when we make the Ajax request, we are taking the category items URL
+	// ==> while we appending '-', the short name that was passed to us through the HTML snippet and '.json'. 
+	// ==> Remember the HTML snippet, the cardiology-snippet.html, when it dc.loadCardiologyItems, and it passes the short name right there. Well this is the one we are looking at right now. 
 	dc.loadCardiologyItems = function (cardiologyCategoryShort) {
 		showLoading("#main-content");
 		$ajaxUtils.sendGetRequest(
-			cardiologyItemsUrl + "-" + cardiologyCategoryShort + ".json",
-			buildAndShowCardiologyItemsHTML);
+			cardiologyItemsUrl + "-" + cardiologyCategoryShort + ".json", // Our URL that we are making Ajax request ist now complete when we put those 4 parts/pieces together.
+			buildAndShowCardiologyItemsHTML); // We are also designating in a function that is going to process the result of that Ajax request. And again, it's going to be JSON so we dont need to put flase.
 	};
 
 
@@ -140,6 +158,9 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 				$ajaxUtils.sendGetRequest(
 					cardiologyHtml,
 					function (cardiologyHtml) {
+						// Switch CSS class active to menu button
+						switchCardiologyToActive();
+
 						var cardiologyViewHtml =
 							buildCardiologyViewHtml(cardiologyCategories,
 													cardiologyTitleHtml,
@@ -190,6 +211,11 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 
 
 	// Builds HTML for the single cardiology category page based on the data from the server
+	// ==> Basically, we know that cardiologyCategoryItems is going to be an object, that's going to get returned because our JSON is going to get processed.
+	// ==> Building up our CardiologyItemsViewHtml. and again we are passing that CardiologyCategoryItems, passing the HTML snippet for the title, and passing the HTML snippet for the ony single cardiology category Item.
+	// ==> Once that gets built up and saved into CardiologyItemsViewHtml, all we have to do is insert it into an element with an ID main-content and we are done.
+	// ==> And again, false false for both ajax request, because both of those Ajax requests dont need to process these snippets as JSON. They need to process them as just the regular strength.
+	// ==> Now, let's take a look at buildCardiologyItemsViewHTML function below.
 	function buildAndShowCardiologyItemsHTML (CardiologyCategoryItems) {
 		//Load title snippet of cardiology items page
 		$ajaxUtils.sendGetRequest(
@@ -199,6 +225,9 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 				$ajaxUtils.sendGetRequest(
 					cardiologyItemHtml,
 					function (cardiologyItemHtml) {
+						// Switch CSS class active to menu button
+						switchCardiologyToActive();
+
 						var CardiologyItemsViewHtml =
 							buildCardiologyItemsViewHTML(CardiologyCategoryItems,
 														 cardiologyItemsTitleHtml,
@@ -212,6 +241,12 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 
 	// Using Cardiology categories and Cardiology items data and snippets html
 	// Build cardiology items view HTML to be inserted into page
+	// ==> Unlike the previously similar function, we actually need to insert some values inside of our title as well. So, in this case, it's going to be name and special_category.
+	// ==> The name and special_category come from CardiologyCategoryItems.That's that object that was returned for us from github as our JSON that was converted into an Object .category, and our property .name. (CardiologyCategoryItems.category.name)
+	// ==> And the same thing with CardiologyCategoryItems.category.special_category. So, once we insert that, our cardiologyItemsTitleHtml is actually ready to be used for our final HTML. That's why we are starting this final HTML with this particular
+	// ==> variable that's already kind of pre-inserted with the values of our onject. 
+	// ==> And again starting the section as a row, this is something we stripped our of that particular snippet because, this is only one of these lines and that snippet is going to get repeated over and over again for every single item in the cardiology category.
+	// ==> Once we are done with that, we are looping over the categories items.
 	function buildCardiologyItemsViewHTML(CardiologyCategoryItems,
 										  cardiologyItemsTitleHtml,
 										  cardiologyItemHtml) {
@@ -232,13 +267,14 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 		var cardiologyItems = CardiologyCategoryItems.cardiology_items;
 		var cCatShortName = CardiologyCategoryItems.category.short_name;
 		for (var i = 0; i < cardiologyItems.length; i++) {
-			// insert category items values
+			// insert cardiolgy category items 
 			var html = cardiologyItemHtml;
 			html = 
 				insertProperty(html, "short_name", cardiologyItems[i].short_name);
 			html = 
 				insertProperty(html, "cCatShortName", cCatShortName);
 
+			// ==> Whe have different functions for insertItemPrice and insertItemPortionName. See the functions below.
 			// html = 
 			// 	insertItemPrice(html,
 			// 					"price_small",
@@ -255,6 +291,8 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 			// 	insertItemPortionName(html,
 			// 					"large_portion_name",
 			// 					cardiologyItems[i].large_portion_name);
+
+
 			html =
 				insertProperty(html,
 								"name",
@@ -265,6 +303,11 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 								cardiologyItems[i].description);
 
 			// Add clearfix after every second cardiology item
+			// ==> Remember the clearfix, right? we cant control how large our caetgor items description are going to be. Some might be too large, some might be too short, and we dont want our grid to be messed up.
+			// ==> So what we need to do is, after every second cardiology category item resp. after every sedong grid cell, we need to place this clear fix HTML and thats what we are doing here.
+			// ==> We are using actually the remainder function or the remainder operator in Javascript. So, we are saying i remainder of 2, division of 2. And we are saying, it that's not equal to 0, meaning there is a remainder.
+			// ==> So we have item 0, item 1, item 2, item 3 and so on. Well item 0 is our first item, because it's a 0, our arrays are 0 based. Item 0 is our first item and item 1 is our second item.
+			// ==> And it's after the secont item that we need to place our clearfix html. Well that means that every odd (=ungerade) number resp every odd number index is where we need to append this clearfix html to. And if it is, we do, and we move on.
 			if (i % 2 != 0) {
 				html +=
 					"<div class='clearfix visible-lg-block visible-md-block'></div>";
@@ -274,28 +317,37 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 		}
 
 		finalHtml += "</section>";
-		return finalHtml;
+		return finalHtml; // this final html gets saved into this buildCardiologyItemsViewHTML and gets inserted into our main content.
 	}
 
 	// // Appends price with '$' if price exists
+	// // ==> reason for seperate functions for insertItemPrice and insertItemPortionName is because not every time we have a price, e.g. a price for a smaller portion might not even exist.
+	// // ==> So we first check, whether that thing even exists, if it exists we are inserting the property (small_portion_name, large_portion_name, price_small, price_large) with its value and if it doesnt exist, what we insert instead of 
+	// // ==> that we are substituiting with an empty string, so basically just wiping it out, so nothing is in that particular snippet with that value if that 
+	// // ==> value doesnt exist. (obviously, we cant just leave that curly braces, a small portion price value or property inside our snippet - we dont want that showing up to the user.)
 	// function insertItemPrice(html, pricePropName, priceValue) {
 	// 	// If not specified, replace with empty string
 	// 	if (!priceValue) {
 	// 		return insertProperty(html, pricePropName, "");
 	// 	}
-
+	// // ==> If the value exists, we are going ahead and formatting our price to be a proper dollar amount. and we use toFixed(2) ==> 2 nachkommastellen
+	// // ==> And then we are using our insert property as before in order to put that in. (And so that's in the case that the price value actually exists, if not, we will insert an empty string.
 	// 	priceValue = "$" + priceValue.toFixed(2);
 	// 	html = insertProperty(html, pricePropName, priceValue);
 	// 	return html;
 	// }
 
+
 	// // Appends protion name in parens if it exists
+	// // ==> sometimes portion doesnt exist in that type, particular value. So large poriton may not exist or small portion may not exist. So thats why we need to send it through a special function.
+	// // ==> same resp similar though as in insertItemPrice function.
 	// function insertItemPortionName(html, portionPropName, portionValue){
 	// 	// If not specified, return original string
 	// 	if (!portionValue) {
 	// 		return insertProperty(html, portionPropName, "");
 	// 	}
-
+	// // ==> if the value exists, we are going ahead and put braces around the portion value. 
+	// // ==> And then we are using our insert property as before in order to put that in.
 	// 	portionValue = "(" + portionValue + ")";
 	// 	html = insertProperty(html, portionPropName, portionValue);
 	// 	return html;
