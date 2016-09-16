@@ -230,6 +230,10 @@ h3.ablation-item-title {
 	font-size: .9em;
 	font-style: italic;
 }
+
+#ablation-subtitle {
+	margin-bottom: 30px;
+}
 /* END ABLATION PAGE */
 
 

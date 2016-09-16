@@ -239,22 +239,22 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 			html = 
 				insertProperty(html, "cCatShortName", cCatShortName);
 
-			html = 
-				insertItemPrice(html,
-								"price_small",
-								cardiologyItems[i].price_small);
-			html = 
-				insertItemPortionName(html,
-								"small_portion_name",
-								cardiologyItems[i].small_portion_name);
-			html = 
-				insertItemPrice(html,
-								"price_large",
-								cardiologyItems[i].price_large);
-			html = 
-				insertItemPortionName(html,
-								"large_portion_name",
-								cardiologyItems[i].large_portion_name);
+			// html = 
+			// 	insertItemPrice(html,
+			// 					"price_small",
+			// 					cardiologyItems[i].price_small);
+			// html = 
+			// 	insertItemPortionName(html,
+			// 					"small_portion_name",
+			// 					cardiologyItems[i].small_portion_name);
+			// html = 
+			// 	insertItemPrice(html,
+			// 					"price_large",
+			// 					cardiologyItems[i].price_large);
+			// html = 
+			// 	insertItemPortionName(html,
+			// 					"large_portion_name",
+			// 					cardiologyItems[i].large_portion_name);
 			html =
 				insertProperty(html,
 								"name",
@@ -277,29 +277,29 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 		return finalHtml;
 	}
 
-	// Appends price with '$' if price exists
-	function insertItemPrice(html, pricePropName, priceValue) {
-		// If not specified, replace with empty string
-		if (!priceValue) {
-			return insertProperty(html, pricePropName, "");
-		}
+	// // Appends price with '$' if price exists
+	// function insertItemPrice(html, pricePropName, priceValue) {
+	// 	// If not specified, replace with empty string
+	// 	if (!priceValue) {
+	// 		return insertProperty(html, pricePropName, "");
+	// 	}
 
-		priceValue = "$" + priceValue.toFixed(2);
-		html = insertProperty(html, pricePropName, priceValue);
-		return html;
-	}
+	// 	priceValue = "$" + priceValue.toFixed(2);
+	// 	html = insertProperty(html, pricePropName, priceValue);
+	// 	return html;
+	// }
 
-	// Appends protion name in parens if it exists
-	function insertItemPortionName(html, portionPropName, portionValue){
-		// If not specified, return original string
-		if (!portionValue) {
-			return insertProperty(html, portionPropName, "");
-		}
+	// // Appends protion name in parens if it exists
+	// function insertItemPortionName(html, portionPropName, portionValue){
+	// 	// If not specified, return original string
+	// 	if (!portionValue) {
+	// 		return insertProperty(html, portionPropName, "");
+	// 	}
 
-		portionValue = "(" + portionValue + ")";
-		html = insertProperty(html, portionPropName, portionValue);
-		return html;
-	}
+	// 	portionValue = "(" + portionValue + ")";
+	// 	html = insertProperty(html, portionPropName, portionValue);
+	// 	return html;
+	// }
 
 
 
