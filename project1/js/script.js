@@ -34,7 +34,7 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	var allCardiologyCategoriesUrl = "https://piriya001.github.io/company/project1/data/cardiologyCategories.json"; // URL where you can get the JSON from our server side
 	var cardiologyTitleHtml = "snippets/cardiology-title-snippet.html";
 	var cardiologyHtml = "snippets/cardiology-snippet.html";
-	var cardiologyItemsUrl = "https://piriya001.github.io/company/project1/data/cardiology-items.json?category=";
+	var cardiologyItemsUrl =  "https://piriya001.github.io/company/project1/data/cardiology-items"; //"https://piriya001.github.io/company/project1/data/cardiology-items.json";
 	var cardiologyItemsTitleHtml = "cardiology-items-title.html";
 	var cardiologyItemHtml = "cardiology-item.html";
 
@@ -114,7 +114,7 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	dc.loadCardiologyItems = function (cardiologyCategoryShort) {
 		showLoading("#main-content");
 		$ajaxUtils.sendGetRequest(
-			cardiologyItemsUrl + cardiologyCategoryShort,
+			cardiologyItemsUrl + "-" + cardiologyCategoryShort + ".json",
 			buildAndShowCardiologyItemsHTML);
 	};
 
