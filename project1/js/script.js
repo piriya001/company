@@ -35,8 +35,8 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	var cardiologyTitleHtml = "snippets/cardiology-title-snippet.html";
 	var cardiologyHtml = "snippets/cardiology-snippet.html";
 	var cardiologyItemsUrl =  "https://piriya001.github.io/company/project1/data/cardiology-items"; //"https://piriya001.github.io/company/project1/data/cardiology-items.json";
-	var cardiologyItemsTitleHtml = "cardiology-items-title.html";
-	var cardiologyItemHtml = "cardiology-item.html";
+	var cardiologyItemsTitleHtml = "snippets/cardiology-items-title.html";
+	var cardiologyItemHtml = "snippets/cardiology-item.html";
 
 	//Convenience function for inserting innner HTML for 'select'
 	// ==> convenience method, so we dont have to write this from scratch every time because we are goint to have to do this several times. 
