@@ -34,7 +34,7 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	var allCardiologyCategoriesUrl = "https://piriya001.github.io/company/project1/data/cardiologyCategories.json"; // URL where you can get the JSON from our server side
 	var cardiologyTitleHtml = "snippets/cardiology-title-snippet.html";
 	var cardiologyHtml = "snippets/cardiology-snippet.html";
-	var cardiologyItemsUrl = "https://piriya001.github.io/company/project1/data/cardiology-items.json?cardiologyCategories=";
+	var cardiologyItemsUrl = "https://piriya001.github.io/company/project1/data/cardiology-items.json?category=";
 	var cardiologyItemsTitleHtml = "cardiology-items-title.html";
 	var cardiologyItemHtml = "cardiology-item.html";
 
