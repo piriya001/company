@@ -1,7 +1,7 @@
-body {
+* {
 	 box-sizing: border-box;
-
 }
+
 
 /** HEADER **/
 #navigation-container {
@@ -21,9 +21,7 @@ body {
 }
 #up-corner-header {
 	position: relative;
-	float: right;
-	top: 0;
-	right: 0;
+	position: top right;	
 }
 #support {
 	color: blue;
@@ -55,22 +53,48 @@ body {
 /** END FOOTER **/
 
 /** MAIN CONTENT **/
+#main-content {
+	padding: 0px;
+	border-radius: 0px;
+	border: 0;
+}
 #home-img {
 	background: url('../images/home/home_background.png') no-repeat;
 	background-size: cover;
 	background-position: center;
 	height: 400px;
 	width: 100%;
+	border-radius: 0;
 }
-.jumbatron {
+.jumbotron {
 	position: relative;
+	margin-bottom: 0;
+	padding: 0;
+	display: block;
+	padding-right: 15px;
+}
+#jumbotron-heading {
+	text-align: right;
+	color: white;
+	padding-top: 31px;
+	margin-top: 0px;
+}
+#jumbotron-get-a-quote {
+	float: right;
+	border-radius: 0;
+	border: 0;
+	color: #004c8f;
+	height: 32px;
+	width: 120px;
+	margin-top: 80px;
+	background-color: #dde1e3;
 }
 #home-img-div{
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	width: 100%;
-	background: rgba(255,255,255,0.2);
+	background: rgba(255,255,255,0.3);
 	height: 60px;
 }
 #home-img-row-container{
@@ -79,11 +103,13 @@ body {
 #home-img-row{
 	margin-top: 0px;
 	height: 60px;
-	
 }
 #home-img-inputtext{
 	border-radius: 0;
 	border: 4px solid #128fe2;
+	height: 30px;
+	font-size: 0.9em;
+	padding: 0 0 0 12px;
 }
 #home-img-dropdown{
 	width: 100%;
@@ -91,6 +117,11 @@ body {
 	color: white;
 	border-color: #004c8f;
 	background-color: #004c8f;
+	text-align: center;
+	padding-right: 6px;
+	padding-left: 6px;
+	height: 30px;
+	font-size: 0.9em;
 }
 #home-img-button{
 	width: 100%;
@@ -98,12 +129,64 @@ body {
 	color: white;
 	border-color: #42aaf0;
 	background-color: #42aaf0;
+	height: 30px;
+	font-size: 0.9em;
+	text-align: center;
 }
 #home-img-inputtext-div, #home-img-dropdown-div, #home-img-button-div {
 	height: 100%;
 	margin-bottom: 0;
 	padding: 15px;
 }
+#whyMedobal{
+	position: relative;
+	background-size: cover;
+	background-color: #11629c;
+	padding-bottom: 30px;
+}
+#whyMedobal-header {
+	text-align: center;
+	color: white;
+	margin-bottom: 50px;
+}
+#icon-text-uppercase{
+	text-align: center;
+	display: block;
+	color: white;
+	text-transform: uppercase;
+}
+#icon-text-normal {
+	text-align: center;
+	display: block;
+	color: white;
+}
+
+
+
+#needHelpSupport {
+	background-color: #3ea5ea;
+	background-size: cover;
+	height: 60px;
+}
+#needHelp {
+	text-align: center;
+	font-size: 1.6em;
+	color: white;
+	margin: 0;
+	margin-top: 14px;
+	margin-bottom: 14px;
+}
+
+#quote {
+	background-color: #11629c;
+	background-size: cover;
+}
+#quote-header {
+	color: white;
+	margin-bottom: 30px;
+}
+
+
 
 
 /** END MAIN CONTENT **/

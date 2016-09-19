@@ -7,40 +7,45 @@
     <title>Medobal</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 <body>
   <header>
     <nav id="header-nav" class="navbar navbar-default">
       <div id="navigation-container" class="container">
       
-        <div id="up-corner-header" class="">
-          <p id="support" class="hidden-xs">Support +91 744 9199 744</p>
+        <div id="up-corner-header">
+          <p id="support" class="hidden-xs pull-right">Support +91 744 9199 744</p>
         </div> <!-- End of div #up-corner-header-->
-          <div class="navbar-header">
-            <a href="index.html" class="pull-left"> 
-              <div id="logo-img" alt="Logo image"></div>
-            </a> 
 
-            <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+        <div id="main-header">
+            <div class="navbar-header">
+              <a href="index.html" class="pull-left"> 
+                <div id="logo-img" alt="Logo image"></div>
+              </a> 
 
-          </div> <!-- End of div.navebar-header -->
-          <div id="collapsable-nav" class="collapse navbar-collapse">
-            <ul id="nav-list" class="nav navbar-nav navbar-left">
-              <li id="cardiology-button"><a href="#">Cardiology</a></li>
-              <li id="cosmetic-button"><a href="#">Cosmetic</a></li>
-              <li id="dentistry-button"><a href="#">Dentistry</a></li>
-              <li id="fertility-button"><a href="#">Fertility</a></li>
-              <li id="orthopedics-button"><a href="#">Orthopedics</a></li>
-              <li id="ophthalmology-button"><a href="#">Ophthalmology</a></li>
-              <li id="wellness-button"><a href="#">Wellness</a></li>
-              <li id="others-button"><a href="#">Others</a></li>
-            </ul>
-          </div>
+              <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div> <!-- End of div.navebar-header -->
+            <div id="collapsable-nav" class="collapse navbar-collapse pull-left">
+              <ul id="nav-list" class="nav navbar-nav navbar-left">
+                <li id="cardiology-button"><a href="#">Cardiology</a></li>
+                <li id="cosmetic-button"><a href="#">Cosmetic</a></li>
+                <li id="dentistry-button"><a href="#">Dentistry</a></li>
+                <li id="fertility-button"><a href="#">Fertility</a></li>
+                <li id="orthopedics-button"><a href="#">Orthopedics</a></li>
+                <li id="ophthalmology-button"><a href="#">Ophthalmology</a></li>
+                <li id="wellness-button"><a href="#">Wellness</a></li>
+                <li id="others-button"><a href="#">Others</a></li>
+              </ul>
+            </div>
+        </div> <!-- End of div.container --> 
+
       </div> <!-- End of div.container -->
     </nav> <!-- End of nav #header-nav -->
   </header>
@@ -48,13 +53,16 @@
 
 
 
-  <div id="main-content">
-    <div id="home-img" alt="Home image" class="jumbatron">
+  <div id="main-content" class="container-fluid">
     
-      <div id="home-img-div">
+    <div id="home-img" alt="Home image" class="jumbotron">
+      <div class="container">
+        <h2 id="jumbotron-heading">Find your Medic Globally</h2>
+        <button id="jumbotron-get-a-quote" class="btn btn-default" type="button">Get a Quote</button>
+      </div>
+      <div id="home-img-div" class="container">
         <div class="container" id="home-img-row-container">
-          <div class="row" id="home-img-row">
-            
+          <div class="row" id="home-img-row">           
             <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8" id="home-img-inputtext-div">
               <input id="home-img-inputtext" type="text" class="form-control" id="findYourTreatment" placeholder="Find your Treatment">
             </div> <!-- End of div #home-img-inputtext --> 
@@ -74,15 +82,92 @@
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" id="home-img-button-div">
               <button id="home-img-button" class="btn btn-default" type="submit">SEARCH</button>
             </div> <!-- End of div #home-img-button --> 
-              
 
           </div> <!-- End of div #home-img-row -->
         </div>  <!-- End of div #home-img-row-container -->
       </div> <!-- End of div #home-img-div -->
-    </div>  
+    </div> <!-- End of div #home-img --> 
+
+    <div id="whyMedobal" class="container-fluid">
+      <h2 id="whyMedobal-header">Why Medobal?</h2>
+      <div class="container">
+        <div class="row">
+          <div id="star-icon-div" class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+            <span id="icon-text-uppercase">choose your</span>
+            <span id="icon-text-normal">own Treatments</span>
+          </div>
+          <div id="doctor-icon-div" class="col-sm-2 col-md-2 col-lg-2">
+            <span id="icon-text-uppercase">well qualified</span>
+            <span id="icon-text-normal">Doctors</span>
+          </div>
+          <div id="globe-icon-div" class="col-sm-2 col-md-2 col-lg-2">
+            <span id="icon-text-uppercase">worldwide</span>
+            <span id="icon-text-normal">Network</span>
+          </div>
+          <div id="accredit-icon-div" class="col-sm-2 col-md-2 col-lg-2">
+            <span id="icon-text-uppercase">accredited</span>
+            <span id="icon-text-normal">Hospitals</span>
+          </div>
+          <div id="costsave-icon-div" class="col-sm-2col-md-2 col-lg-2">
+            <span id="icon-text-uppercase">cost savings</span>
+            <span id="icon-text-normal">In a Smart way</span>
+          </div>
+        </div> <!-- End of div.class -->
+      </div> <!-- End of div.container -->
+    </div> <!-- End of div #whyMedobal -->
+
+   
+    
+    <div id="needHelpSupport" class="container-fluid hidden-xs"> 
+      <p id="needHelp"> Need help? &nbsp; Call our support team at +91 744 9199 744</p>
+    </div> <!-- End of div #featured -->
+
+    
+
+    <div id="quote" class="container-fluid"> 
+      <div class="container">
+        <h3 id="quote-header">Let us know your requirement</h3>
+        <form>
+          <div class="container">
+            <div class="row">
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" id="firstName" placeholder="First name">
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" id="lastName" placeholder="Last name">
+              </div>
 
 
-    </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" id="address01" placeholder="Address 01">
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" id="address02" placeholder="Address 02">
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="tel" class="form-control" id="phone" placeholder="Phone">
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="email" class="form-control" id="email" placeholder="Email">
+              </div>
+
+
+
+            </div>
+          </div> <!-- End of div.container -->
+        </form> <!-- End of from -->
+      </div> <!-- End of div.container -->
+    </div> <!-- End of div #quote -->
+
+
+
+
+
+
+
+
+
   </div> <!-- End of div #main-content -->
 
   
@@ -91,7 +176,7 @@
   <footer class="panel-footer">
     <div class="container">
       <div class="row">
-        <section id="home" class="col-sm-3">
+        <section id="home" class="col-lg-3 col-md-3 col-sm-3">
           <span>Home</span><br>
           <a href="#">Featured Procedures</a><br>
           <a href="#">Featured Destinations</a><br>
@@ -99,7 +184,7 @@
           <a href="#">Featured Blog Topics</a>
           <hr class="visible-xs">
         </section>
-        <section id="about_us" class="col-sm-3">
+        <section id="about_us" class="col-lg-3 col-md-3 col-sm-3">
           <span>About us</span><br>
           <a href="#">Our Vision</a><br>
           <a href="#">Our Logo</a><br>
@@ -108,7 +193,7 @@
           <a href="#">Why to choose us</a>
           <hr class="visible-xs">
         </section>
-        <section id="services" class="col-sm-3">
+        <section id="services" class="col-lg-3 col-md-3 col-sm-3">
           <span>Services</span><br>
           <a href="#">Cardiology</a><br>
           <a href="#">Cosmetic</a><br>
@@ -120,7 +205,7 @@
           <a href="#">Others</a>
           <hr class="visible-xs">
         </section>
-        <section id="accounts" class="col-sm-3">
+        <section id="accounts" class="col-lg-3 col-md-3 col-sm-3">
           <span>Accounts</span><br>
           <a href="#">My Account</a><br>
           <a href="#">Create Account</a><br>
@@ -130,5 +215,11 @@
       </div> <!-- End of div.row -->
     </div> <!-- End of div.container -->
   </footer>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/ajax-utils.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
