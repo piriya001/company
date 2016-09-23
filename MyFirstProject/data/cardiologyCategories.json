@@ -1,0 +1,30 @@
+
+
+[{"id":1,"short_name":"A","name":"Angioplasty","special_category":"Cardiac Vessels","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/1.json"},
+{"id":2,"short_name":"AVR","name":"Aortic Valve Replacement","special_category":"Heart Valve and Septa","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/2.json"},
+{"id":3,"short_name":"BP","name":"Bentall Procedure","special_category":"Cardiac Vessels","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/3.json"},
+{"id":4,"short_name":"BTS","name":"Blalock-Taussig shunt","special_category":"Heart Valve and Septa","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/4.json"},
+{"id":5,"short_name":"CA","name":"Catheter ablation","special_category":"Other Procedures","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/5.json"},
+{"id":6,"short_name":"CAB","name":"Cononary artery bypass (CABG)","special_category":"Cardiac Vessels","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/6.json"},
+{"id":7,"short_name":"FP","name":"Fontan Procedure","special_category":"Heart Valve and Septa","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/7.json"},
+{"id":8,"short_name":"GP","name":"Glenn Procedure","special_category":"Heart Valve and Septa","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/8.json"},
+{"id":9,"short_name":"HT","name":"Heart Transplantation","special_category":"Other Procedures","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/9.json"},
+{"id":10,"short_name":"AO","name":"Left atrial appendage occlusion","special_category":"Other Procedures","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/10.json"},
+{"id":11,"short_name":"MP","name":"Maze Procedure","special_category":"Other Procedures","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/11.json"},
+{"id":12,"short_name":"MVR","name":"Mitral Valve Replacement","special_category":"Heart Valve and Septa","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/12.json"},
+{"id":13,"short_name":"NP","name":"Norwood Procedure","special_category":"Heart Valve and Septa","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/13.json"},
+{"id":14,"short_name":"PI","name":"Pacemaker insertion","special_category":"Other Procedures","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/14.json"},
+{"id":15,"short_name":"P","name":"Pericardiectomy","special_category":"Other Procedures","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/15.json"},
+{"id":16,"short_name":"VRR","name":"Valve Repair","special_category":"Heart Valve and Septa","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/16.json"},
+{"id":17,"short_name":"VRT","name":"Valve Replacement","special_category":"Heart Valve and Septa","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/17.json"},
+{"id":18,"short_name":"V","name":"Valvuloplasty","special_category":"Heart Valve and Septa","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/18.json"},
+{"id":19,"short_name":"DP","name":"Valve-sparing Aortic Root Replacement (David Procedure)","special_category":"Cardiac Vessels","url":"https://piriya001.github.io/company/project1/data/cardiologyCategories/19.json"}]
+
+
+
+
+
+
+
+
+

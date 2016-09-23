@@ -1,0 +1,353 @@
+body {
+	/*font-size: 16px; */
+	color: #fff;
+	/* background-color: #99ccff; */
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;  
+}
+
+/** HEADER **/
+#header-nav {
+	/* background-color: #c3eee7; -- only for testing purpose */
+	background-color: white;
+	border-radius: 0;
+	border: 0;
+	box-shadow: 0px 2px 2px #888888;
+}
+#logo-img {
+	background: url('../images/medobal-logo.png') no-repeat;
+	width: 200px;
+	height: 47px;
+	margin: 20px 20px 10px 10px;
+}
+#nav-list {
+	margin-top: 20px;
+}
+#nav-list a {
+	color: black; 
+	text-align: center;
+}
+#nav-list a:hover {
+	background-color: #c3eee7; /* -- only for testing purpose */
+}
+.navbar.navbar-default {
+	margin-bottom: 0px;
+}
+/*
+#nav-list a span {
+	font-size: 1.8em;
+}*/
+/*
+#phone {
+	margin-top: 5px;
+}
+#phone a { 
+	text-align: right;
+	padding-bottom: 0;
+} */
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+	border: 1px solid #99ccff; /* change the color afterwards*/
+}
+/* do i need this??? 
+.navebar-header button.navbar-toggle {
+	clear: both;
+}
+*/
+
+/** END HEADER **/
+
+/** FOOTER **/
+.panel-footer {
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #333;
+	border-top: 0;
+}
+.panel-footer div.row {
+	margin-bottom: 35px;
+}
+#home, #about_us, #services, #accounts {
+	line-height: 1.5;
+}
+#home > span, #about_us > span, #services > span, #accounts > span {
+	font-size: 1.3em;
+	color: rgb(0, 160, 255);
+}
+
+
+/** END FOOTER **/
+
+/** HOME PAGE **/
+#main-content {
+	background-color: #00639a;
+}
+h1.why-medobal-heading {
+	color: white;
+	position: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.container {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.container .jumbotron {
+	margin: 0px;
+
+}
+h1.treatment-heading {
+	color: #00639a;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#treatment-tiles {
+	background-color: white;
+}
+#caridology-tile, #cosmetic-tile, #dentistry-tile, #fertility-tile, #orthopedics-tile, #ophthalmology-tile {
+	height: 250px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+	border: 1.5px solid black;
+	overflow: hidden;
+}
+#caridology-tile:hover, #cosmetic-tile:hover, #dentistry-tile:hover, #fertility-tile:hover, #orthopedics-tile:hover, #ophthalmology-tile:hover {
+	box-shadow: 0 1px 5px 1px #00639a;
+}
+#caridology-tile {
+	background: url('../images/cardiology-tile.png') no-repeat;
+	background-position: center;
+}
+#cosmetic-tile {
+	background: url('../images/cosmetic-tile.png') no-repeat;
+	background-position: center;
+}
+#dentistry-tile {
+	background: url('../images/dentistry-tile.png') no-repeat;
+	background-position: center;
+} 
+#fertility-tile {
+	background: url('../images/fertility-tile.png') no-repeat;
+	background-position: center;
+} 
+#orthopedics-tile {
+	background: url('../images/orthopedics-tile.png') no-repeat;
+	background-position: center;
+} 
+#ophthalmology-tile {
+	background: url('../images/ophthalmology-tile.png') no-repeat;
+	background-position: center;
+}
+#caridology-tile span, #cosmetic-tile span, #dentistry-tile span, #fertility-tile span, #orthopedics-tile span, #ophthalmology-tile span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: 0.5;
+}
+/** END HOME PAGE **/
+
+/* CARDIOLOGY PAGE */
+.ablation-tile {
+	position: relative;
+	border: 2px solid black;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 15px;
+}
+
+.ablation-tile span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: 0.6;
+}
+.ablation-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+#cardiology-title + div {
+	margin-bottom: 50px;
+}
+/* END CARDIOLOGIY PAGE */
+
+/*ABLATION PAGE*/
+.menu-ablation-tile {
+	margin-bottom: 25px;
+}
+.menu-ablation-tile hr{
+	width: 80%;
+}
+.menu-ablation-tile .ablation-item-price {
+	font-size: 1.1em;
+	text-align: right;
+	margin-top: -15px;
+	margin-right: -15px;
+}
+.menu-ablation-tile .ablation-item-price span {
+	font-size: .6em; 
+}
+.ablation-item-photo {
+	position: relative;
+	border: 2px solid black;
+	overflow: hidden;
+	padding-bottom: 0;
+	margin-right: -15px;
+	margin-left: auto;
+	margin-bottom: 20px;
+	max-width: 250px;
+	max-height: 150px;
+}
+
+.ablation-item-photo div {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 80px;
+	background-color: #333;
+	text-align: center;
+}
+.ablation-item-description {
+	text-align: left;
+	padding-right: 30px;
+}
+h3.ablation-item-title {
+	margin: 0 0 10px;
+}
+.ablation-item-details {
+	font-size: .9em;
+	font-style: italic;
+}
+
+#ablation-subtitle {
+	margin-bottom: 30px;
+}
+/* END ABLATION PAGE */
+
+
+
+/********* Large devices only *********/
+@media (min-width: 1200px) {
+	/* Home Page */
+	.container .jumbotron {
+		background: url('../images/Jumbotron_1200.png') no-repeat;
+		height: 376px;
+
+	}
+	/* End Home Page */
+}
+
+/********* Medium devices only *********/
+@media (min-width: 992px) and (max-width: 1199px) {
+	/* Home Page */
+	.container .jumbotron {
+		background: url('../images/Jumbotron_992.png') no-repeat;
+		height: 311px;
+    }
+    /* End Home Page */
+	
+}
+
+/********* Small devices only *********/
+@media (min-width: 768px) and (max-width: 991px) {
+	/* Home Page */
+	.container .jumbotron {
+		background: url('../images/Jumbotron_768.png') no-repeat;
+		height: 241px;
+
+    }
+    /* End Home Page */
+	
+}
+
+/********* Extra small devices only *********/
+@media (max-width: 767px) {
+	/* Header */
+	#logo-img {
+	background: url('../images/medobal-logo.png') no-repeat;
+	width: 200px;
+	height: 47px;
+	margin: 20px 20px 10px 30px;
+}
+	/* End Header */
+
+	/* Footer */
+	.panel-footer section {
+		margin-bottom: 30px;
+		/* text-align: center; -- not needed, as i have specified text align center in the body already*/
+	}
+	.panel-footer section:nth-child(4) {
+		margin-bottom: 0;
+	}
+	.panel-footer section hr {
+		width: 75%;
+	}
+	/* End Footer */
+
+
+	/* Home Page */
+	.container .jumbotron {
+		padding: 0px;
+    }
+
+    #caridology-tile, #cosmetic-tile, #dentistry-tile, #fertility-tile, #orthopedics-tile, #ophthalmology-tile {
+	/* in xs browser, the tiles wont take the wull width and the border of it will adjusted to the tile size */
+	width: 400px;
+	margin: 0 auto 15px;
+	}
+    /* End Home Page */
+
+    .ablation-item-photo {
+    	margin-right: auto;
+    }
+    .menu-ablation-tile .ablation-item-price {
+    	text-align: center;
+    }
+    .ablation-item-description {
+    	text-align: center;
+    }
+
+}
+
+/********* Super extra small devices only :-) (e.g. IPhone 4) *********/
+@media (max-width: 479px) { 
+	/* Home page */
+	#caridology-tile, #cosmetic-tile, #dentistry-tile, #fertility-tile, #orthopedics-tile, #ophthalmology-tile {
+	/* in super extra small browser, the tiles wont take the wull width and the border of it will adjusted to the tile size */
+	width: 280px;
+	margin: 0 auto 15px;
+	}
+
+	.col-xxs-12 {
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left;
+		width: 100%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
