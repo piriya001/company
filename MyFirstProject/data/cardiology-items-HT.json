@@ -1,8 +1,0 @@
-{
-	"cardiology_items":[
-	{"id":700,"short_name":"HT1","name":"Heart Transplantation 1","description":"A heart transplant removes a damaged or diseased heart and replaces it with a healthy one. The healthy heart comes from a donor who has died. It is the last resort for people with heart failure when all other treatments have failed.","price_small":2.55,"price_large":5.0,"small_portion_name":"pint","large_portion_name":"quart"},
-	{"id":701,"short_name":"HT2","name":"Heart Transplantation 2","description":"A heart transplant removes a damaged or diseased heart and replaces it with a healthy one. The healthy heart comes from a donor who has died. It is the last resort for people with heart failure when all other treatments have failed.","price_small":2.25,"price_large":4.5,"small_portion_name":"pint","large_portion_name":"quart"},
-	{"id":702,"short_name":"HT3","name":"Heart Transplantation 3","description":"A heart transplant removes a damaged or diseased heart and replaces it with a healthy one. The healthy heart comes from a donor who has died. It is the last resort for people with heart failure when all other treatments have failed.","price_small":2.75,"price_large":5.5,"small_portion_name":"pint","large_portion_name":"quart"}
-	],
-	"category":{"short_name":"HT","name":"Heart Transplantation","special_category":"Cardiac Vessels"}
-}
