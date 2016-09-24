@@ -10,23 +10,52 @@
 	border: 0; /**/
 	margin-bottom: 0;
 }
+#navigation-container {
+	position: relative;
+	/*height: 100px;*/
+}
+#up-corner-header {
+	position: relative; /*absolute??*/
+	padding-top: 5px;
+	height: 30px;	
+}
+#main-header {
+	/*height: 65px;*/
+	padding-left: 0;
+}
+#logo-header {
+	padding-bottom: 3px;
+ /*	margin-right: 5px; */
+ 	
+}
 #logo-img {
 	background: url('../images/header/logo.png') no-repeat;
-	background-size: cover;
-	background-position: center;
-	height: 70px;
-	width: 268px;
+	width: 238px;
+	height: 62px;
+	margin: 0;
+}
+#collapsable-nav { 
+	position: absolute; 
+	bottom: 5px;
+	left: 253px;
+	margin: 0;
+} 
+#support {
+	color: #59b8f8;
+	margin-bottom: 0;
 }
 #nav-list a {
 	font-size: 0.9em;
 	padding-top: 5px;
-	padding-bottom: 0px;
+	padding-bottom: 5px;
 	color: black;
 }
-
-#collapsable-nav {
-	margin-top: 35px;
-	margin-bottom: 10px;
+#nav-list a:hover {
+	background: #d3ecfd;
+}
+#navbar-toggle{
+	margin-top: 17px;
+	margin-bottom: 17px;
 }
 /** END HEADER **/
 
@@ -44,13 +73,26 @@
 }
 /** END FOOTER **/
 
-
 /** MAIN CONTENT **/
-#banner {
-	position: relative;
+#main-content {
+	padding: 0px;
+	border-radius: 0px;
+	border: 0;
+}
+#home-img {
+	background: url('../images/home/home_background.png') no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 400px;
+	width: 100%;
+	border-radius: 0;
 }
 .jumbotron {
-
+	position: relative;
+	margin-bottom: 0;
+	padding: 0;
+	display: block;
+	padding-right: 15px;
 }
 #jumbotron-heading {
 	text-align: right;
@@ -68,39 +110,29 @@
 	margin-top: 80px;
 	background-color: #dde1e3;
 }
-#banner-jumbotron {
-	background: url('../images/home/home_background.png') no-repeat;
-	background-size: cover;
-	background-position: center;
-	height: 400px;
-	width: 100%;
-	border-radius: 0;
-	margin-bottom: 0;
-	padding: 0;
-}
-
-#banner-div{
+#home-img-div{
 	position: absolute;
+	right: 0;
 	bottom: 0;
 	width: 100%;
 	background: rgba(255,255,255,0.3);
 	height: 60px;
 }
-#banner-row-container{
+#home-img-row-container{
 	height: 60px;
 }
-#banner-row{
+#home-img-row{
 	margin-top: 0px;
 	height: 60px;
 }
-#banner-inputtext{
+#home-img-inputtext{
 	border-radius: 0;
 	border: 4px solid #128fe2;
 	height: 30px;
 	font-size: 0.9em;
 	padding: 0 0 0 12px;
 }
-#banner-dropdown{
+#home-img-dropdown{
 	width: 100%;
 	border-radius: 0;
 	color: white;
@@ -112,7 +144,7 @@
 	height: 30px;
 	font-size: 0.9em;
 }
-#banner-button{
+#home-img-button{
 	width: 100%;
 	border-radius: 0;
 	color: white;
@@ -122,13 +154,13 @@
 	font-size: 0.9em;
 	text-align: center;
 }
-#banner-inputtext-div, #banner-dropdown-div, #banner-button-div {
+#home-img-inputtext-div, #home-img-dropdown-div, #home-img-button-div {
 	height: 100%;
 	margin-bottom: 0;
 	padding: 15px;
 }
-
 #whyMedobal{
+	position: relative;
 	background-size: cover;
 	background-color: #11629c;
 	padding-bottom: 30px;
@@ -152,7 +184,6 @@
 
 
 
-
 #needHelpSupport {
 	background-color: #3ea5ea;
 	background-size: cover;
@@ -167,7 +198,6 @@
 	margin-bottom: 14px;
 }
 
-/* QUOTE */
 #quote {
 	background-color: #11629c;
 	background-size: cover;
@@ -176,11 +206,6 @@
 	color: white;
 	margin-bottom: 30px;
 }
-.form-control select {
-	background: url('../images/quote/select.png') no-repeat;;
-	
-}
-
 
 /** END MAIN CONTENT **/
 
@@ -190,9 +215,7 @@
 
 /********** Large devices only - lg **********/
 @media (min-width: 1200px) {
-	.container {
-		width: 1020px;
-	}
+
  
 }
 
@@ -208,13 +231,37 @@
 
 /********** Extra small devices only - xs **********/
 @media (max-width: 767px) {
-	/** FOOTER **/
-	#home, #about_us, #services, #accounts {
-		text-align: center;
-	}
-	/** END FOOTER **/
-	  
+/** HEADER **/
+#main-header {
+	padding-left: 15px;
 }
+#logo-header {
+	padding-left: 15px;
+	padding-bottom: 0px;
+}
+#navigation-container {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+/** END HEADER **/
+
+
+/** FOOTER **/
+#home, #about_us, #services, #accounts {
+	text-align: center;
+}
+/** END FOOTER **/
+  
+}
+
+
+
+
+
+
+
 
 
 
@@ -223,6 +270,12 @@
 @media (max-width: 479px) {
 
 }
+
+
+
+
+
+
 
 
 
