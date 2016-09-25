@@ -4,6 +4,9 @@
 
 
 /** HEADER **/
+#up-header-content {
+	padding-top: 2px;
+}
 #header-nav {
 	background-color: white;
 	border-radius: 0;
@@ -138,6 +141,16 @@
 	color: white;
 	margin-bottom: 50px;
 }
+#icon-row {
+	margin-bottom: 17px;
+}
+
+#star-icon img, #doctor-icon img, #globe-icon img, #accredit-icon img, #costsave-icon img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #icon-text-uppercase{
 	text-align: center;
 	display: block;
@@ -172,13 +185,80 @@
 	background-color: #11629c;
 	background-size: cover;
 }
+
+#quote form {
+	display: block;
+	position: center;
+	margin: 0 auto;
+	width: 92%;
+}
 #quote-header {
 	color: white;
 	margin-bottom: 30px;
 }
-.form-control select {
-	background: url('../images/quote/select.png') no-repeat;;
+/*.form-group select {
+	background-image: url('../images/quote/select.png') no-repeat;
+	background-position: center right;
+} */
+#secOpinionDiv, #uploadDocDiv {
+	height: 34px;
+}
+#secOpinionDiv span, #secOpinionDiv label, #uploadDocLabelDiv {
+	color: white;
+	margin-top: 7px;
+	margin-bottom: 7px;
+
+}
+.form-group {
+	border-radius: 15px;
+}
+#upload-button {
+	height: 34px;
+	width: 40px;
+	padding: 0;
+
+}
+.chevron-up-color{
+	color: #42aaf0;
+	font-size: 1.5em;
+	margin-top: 1.5px;
+	margin-bottom: 1.5px;
+	margin-left: 2.5px;
 	
+}
+
+#uploadDocButtonDiv {
+	margin: 0;
+}
+
+.custom-file-upload > input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+}
+
+#upload-button > label {
+	width: 40px;
+	height: 34px;
+	margin: 0;
+}
+
+#quote-submit-div {
+	margin-bottom: 15px;
+}
+#quote-submit {
+	float: right;
+	border-radius: 0;
+	color: white;
+	border-color: #42aaf0;
+	background-color: #42aaf0;
+	height: 34px;
+	font-size: 1.2em;
+	text-align: center;
+
 }
 
 
