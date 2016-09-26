@@ -2,6 +2,10 @@
 	 box-sizing: border-box;
 }
 
+body {
+
+}
+
 
 /** HEADER **/
 #up-header-content {
@@ -29,22 +33,38 @@
 
 #collapsable-nav {
 	margin-top: 35px;
-	margin-bottom: 10px;
+	margin-bottom: 10px; 
 }
 /** END HEADER **/
 
 /** FOOTER **/ 
 .panel-footer {
+	padding-top: 20px;
 	background-color: #333;
 	border: 0;
 }
-#home > span, #about_us > span, #services > span, #accounts > span  {
+#footer-inner-container {
+	width: 92%;
+
+}
+#footer-heading  {
 	color: rgb(0, 160, 255);
 	font-size: 1.3em;
 }
-#home > a, #about_us > a, #services > a, #accounts > a {
+
+
+#footer-heading > ul > li {
+	list-style-image: none;
+
+}
+#footer-section-list {
+	list-style-type: none;
+	padding-left: 0;
+}
+#footer-section-list a {
 	color: white;
 }
+
 /** END FOOTER **/
 
 
@@ -52,14 +72,13 @@
 #banner {
 	position: relative;
 }
-.jumbotron {
 
-}
 #jumbotron-heading {
 	text-align: right;
 	color: white;
 	padding-top: 31px;
 	margin-top: 0px;
+	padding-bottom: 25px;
 }
 #jumbotron-get-a-quote {
 	float: right;
@@ -75,7 +94,7 @@
 	background: url('../images/home/home_background.png') no-repeat;
 	background-size: cover;
 	background-position: center;
-	height: 400px;
+	height: 450px;
 	width: 100%;
 	border-radius: 0;
 	margin-bottom: 0;
@@ -144,6 +163,10 @@
 #icon-row {
 	margin-bottom: 17px;
 }
+#icon-row > div, #icon-text-row > div {
+	width: 20%;
+}
+
 
 #star-icon img, #doctor-icon img, #globe-icon img, #accredit-icon img, #costsave-icon img{
 	display: block;
@@ -156,16 +179,82 @@
 	display: block;
 	color: white;
 	text-transform: uppercase;
+	font-size: 1.1em;
 }
 #icon-text-normal {
 	text-align: center;
 	display: block;
 	color: white;
+
+}
+
+/* Featured Procedure */ 
+#featuredProcedure, #myProcedureCarousel {
+	
+}
+
+#myProcedureCarousel > div.container {
+	background-color: white;
+}
+
+#featuredProcedureContent {
+	width: 47%;
+}
+#featuredProcedureImage {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	width: 53%;
 }
 
 
+#featuredProcedureContent h2 {
+	color: #004c8f;
+	margin-bottom: 15px;
+	margin-top: 13px;
+	
+
+}
+#featuredProcedureContent p {
+	color: #777c83;
+	line-height: 1.6;
+	font-size: 15px;
+	padding-right: 18px;
 
 
+}
+#miniTitleFeatProc {
+	margin-top: 10px;
+	
+	
+}
+#featuredProcedureImage img{
+	box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.48);
+	width: 480;
+	height: 260;
+}
+
+/*.carousel-control .chevron-feat-proc {
+	color: #42aaf0;
+	height: 50px;
+	width: 30px;
+	font-size: 50px;
+
+}
+
+.procedure-carousel-control{
+	text-shadow: none;
+	background-color: white;
+}*/
+/*.procedure-carousel-control:focus, .procedure-carousel-control:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    opacity: 0;
+    outline: 0px;
+}*/
+
+
+
+/* Need Help Support */ 
 #needHelpSupport {
 	background-color: #3ea5ea;
 	background-size: cover;
@@ -218,13 +307,12 @@
 	padding: 0;
 
 }
-.chevron-up-color{
+.chevron-up-file{
 	color: #42aaf0;
 	font-size: 1.5em;
 	margin-top: 1.5px;
 	margin-bottom: 1.5px;
 	margin-left: 2.5px;
-	
 }
 
 #uploadDocButtonDiv {
@@ -262,6 +350,31 @@
 }
 
 
+/* Blog Topics */
+#featuredBlogTopics {
+	background-color: #dfe0e2;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+#featuredBlogTopics-container {
+	width: 92%;
+}
+
+#featuredBlogTopics-title {
+	color: #11629c;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+#blogTopics {
+	margin-top: 3px;
+}
+#blogTopics a{
+	color: black;
+}
+
+/* End Blog Topics */ 
+
+
 /** END MAIN CONTENT **/
 
 
@@ -273,21 +386,51 @@
 	.container {
 		width: 1020px;
 	}
+
+	/** MAIN CONTENT **/
+	/*#featuredProcedureContent {
+		width: 47%;
+	}
+	#featuredProcedureImage {
+		width: 53%;
+	}	*/
+	/** END MAIN CONTENT **/
  
 }
 
 /********** Medium devices only - md **********/
 @media (min-width: 992px) and (max-width: 1199px) {
+	/** MAIN CONTENT **/
+	#featuredProcedureImage img{
+		/*width: 460;
+		height: 249;*/
+	}
+	/*#featuredProcedureContent {
+		width: 47%;
+	}
+	#featuredProcedureImage {
+		width: 53%;
+	}	*/
+	/** END MAIN CONTENT **/
 
 }
 
 /********** Small devices only - sm **********/
 @media (min-width: 768px) and (max-width: 991px) {
- 
+ 	/** MAIN CONTENT **/
+	
+	/** END MAIN CONTENT **/
 }
 
 /********** Extra small devices only - xs **********/
 @media (max-width: 767px) {
+	/** HEADER **/ 
+	#collapsable-nav {
+		margin: 0px; 
+		text-align: center;
+		width: 100%;
+	}
+	/** END HEADER **/ 
 	/** FOOTER **/
 	#home, #about_us, #services, #accounts {
 		text-align: center;

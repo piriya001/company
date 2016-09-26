@@ -55,7 +55,7 @@
 
 
 
-<div id="main-content">
+<div id="main-content" class="main-content">
   <section id="banner">
     <div id="banner-jumbotron" alt="Home image" class="jumbotron">
       <div id="banner-content" class="container">
@@ -101,7 +101,7 @@
     <div class="container">
       <h2 id="whyMedobal-header">Why Medobal?</h2>
       <div id="icon-row" class="row">
-        <div id="star-icon" class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+        <div id="star-icon" class="col-sm-2 col-md-2 col-lg-2">
           <img src="images/home/why-medobal-icons/star-icon.png">
         </div>
         <div id="doctor-icon" class="col-sm-2 col-md-2 col-lg-2">
@@ -118,8 +118,8 @@
         </div>
       </div> <!-- End of div.row --> 
 
-      <div class="row">
-        <div id="star-icon-div" class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+      <div id="icon-text-row" class="row">
+        <div id="star-icon-div" class="col-sm-2 col-md-2 col-lg-2">
           <span id="icon-text-uppercase">choose your</span>
           <span id="icon-text-normal">own Treatments</span>
         </div>
@@ -146,12 +146,73 @@
 
 
 
+  <section id="featuredProcedure">
+    <div id="myProcedureCarousel" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <!-- <ol class="carousel-indicators" >
+        <li data-target="#myProcedureCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myProcedureCarousel" data-slide-to="1"></li>
+      </ol> -->
+
+      
+        <!-- Wrapper for slides -->
+      <div class="container">
+        <div  class="row">
+          <div class="carousel-inner" role="listbox">
+
+            <div class="item active">
+              <div id="featuredProcedureContent" class="col-lg-5 col-md-5 col-sm-12">
+                <div id="miniTitleFeatProc">Featured Procedure</div>
+                <h2>Liposuction</h2>
+                <p>This Procedure removes unwanted Fats from all Parts of the Body. Can remove Fats from Cheeks, Neck, Chest, Belly, hips, Arms, Legs, Abdomen.<br> Extracted Fats can be used for Face lift, Abdominoplasty, Body Contouring. <br> These Fats can also be turned into Stem cells to treat other Disease. </p>
+              </div>
+              <div id="featuredProcedureImage" class="col-lg-7 col-md-7 col-sm-12">
+                <img src="images/home/featured/procedure/liposuction.png" alt="Liposuction">
+              </div>
+            </div> <!-- div.item -->
+
+
+            <div class="item">
+              <div id="featuredProcedureContent" class="col-lg-5 col-md-5 col-sm-12">
+                <div id="miniTitleFeatProc">Featured Procedure</div>
+                <h2>Liposuction</h2>
+                <p>This Procedure removes unwanted Fats from all Parts of the Body. Can remove Fats from Cheeks, Neck, Chest, Belly, hips, Arms, Legs, Abdomen.<br> Extracted Fats can be used for Face lift, Abdominoplasty, Body Contouring. <br> These Fats can also be turned into Stem cells to treat other Disease. </p>
+              </div>
+              <div id="featuredProcedureImage" class="col-lg-7 col-md-7 col-sm-12">
+                <img src="images/home/featured/procedure/liposuction.png" alt="Liposuction">
+              </div>
+            </div> <!-- div.item -->
+            
+          </div> <!-- div.carousel-inner -->
+        </div> <!-- div.row -->  
+      </div>  <!-- div.container -->
+
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control procedure-carousel-control" href="#myProcedureCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left chevron-feat-proc" aria-hidden=""></span>
+      </a>
+      <a class="right carousel-control procedure-carousel-control" href="#myProcedureCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div> <!-- div #myProcedureCarousel -->
+  </section> <!-- End of section #featuredProcedure -->
+
+
+
 
   <section id="needHelpSupport">
     <div class="container">
       <p id="needHelp"> Need help? &nbsp; Call our support team at +91 744 9199 744</p>
     </div> 
   </section> <!-- End of section #needHelpSupport -->
+
+
+  <section id="featuredDestination">
+
+  </section> <!-- End of section #featuredDestination -->
 
 
 
@@ -242,7 +303,7 @@
                     <label class="custom-file-upload">
                         <input id="file-upload" type="file"/>
                         
-                          <span class="glyphicon glyphicon-chevron-up chevron-up-color"></span>
+                          <span class="glyphicon glyphicon-chevron-up chevron-up-file"></span>
                     </label>      
                   </button>  
                 </div> <!-- End of div #uploadDocButtonDiv -->
@@ -257,8 +318,41 @@
     <!--      </div> --><!-- End of div.container -->
         </form> <!-- End of from -->
       </div> <!-- End of div.container -->
-  </section>
+  </section> <!-- End of div #quote -->
 
+  <section id="featuredBlogTopics">
+    <div class="container">
+      <div id="featuredBlogTopics-container" class="container">      
+        <div id="featuredBlogTopics-title">Featured Blog Topics</div>
+        <div class="row">
+          <div id="blogTopics" class="col-lg-6 col-md-6">
+            <a href="#">What is Cataract?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6">
+            <a href="#">What is Plastic surgery?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6">
+            <a href="#">What are the symptoms of cataract?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6">
+            <a href="#">Who can undergo Cosmetic surgery?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6">
+            <a href="#">How to treat cataract?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6">
+            <a href="#">Does cosmetic surgery require age limit?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6">
+            <a href="#">Does cataract attract all age people?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6">
+            <a href="#">What are the famous cosmetic surgeries?</a>
+          </div>
+        </div> <!-- End of div.row -->
+      </div> <!-- End of div.container #featuredBlogTopics-container-->
+    </div> <!-- End of div.container -->
+  </section> <!-- End of section #featuredBlogTopics -->
 
 
 
@@ -273,44 +367,58 @@
 
 <footer class="panel-footer">
   <div class="container">
-    <div class="row">
-      <section id="home" class="col-lg-3 col-md-3 col-sm-3">
-        <span>Home</span><br>
-        <a href="#">Featured Procedures</a><br>
-        <a href="#">Featured Destinations</a><br>
-        <a href="#">Get a Quote</a><br>
-        <a href="#">Featured Blog Topics</a>
+    <div id="footer-inner-container" class="container">
+
+      <div class="row">
+        <section id="home" class="col-lg-3 col-md-3 col-sm-3">
+          <div id="footer-heading">Home</div>
+          <ul id="footer-section-list">
+            <li><a href="#">Featured Procedures</a></li>
+            <li><a href="#">Featured Destinations</a></li>
+            <li><a href="#">Get a Quote</a></li>
+            <li><a href="#">Featured Blog Topics</a></li>
+          </ul>
         <hr class="visible-xs">
-      </section>
-      <section id="about_us" class="col-lg-3 col-md-3 col-sm-3">
-        <span>About us</span><br>
-        <a href="#">Our Vision</a><br>
-        <a href="#">Our Logo</a><br>
-        <a href="#">Our Icons</a><br>
-        <a href="#">Our Services</a><br>
-        <a href="#">Why to choose us</a>
-        <hr class="visible-xs">
-      </section>
-      <section id="services" class="col-lg-3 col-md-3 col-sm-3">
-        <span>Services</span><br>
-        <a href="#">Cardiology</a><br>
-        <a href="#">Cosmetic</a><br>
-        <a href="#">Dentistry</a><br>
-        <a href="#">Fertility</a><br>
-        <a href="#">Orthopedics</a><br>
-        <a href="#">Ophthalmology</a><br>
-        <a href="#">Wellness</a><br>
-        <a href="#">Others</a>
-        <hr class="visible-xs">
-      </section>
-      <section id="accounts" class="col-lg-3 col-md-3 col-sm-3">
-        <span>Accounts</span><br>
-        <a href="#">My Account</a><br>
-        <a href="#">Create Account</a><br>
-        <a href="#">Your Completed Orders</a>
-        <hr class="visible-xs">
-      </section>
-    </div> <!-- End of div.row -->
+        </section> <!-- end of section #home -->
+
+        <section id="about_us" class="col-lg-3 col-md-3 col-sm-3">
+          <div id="footer-heading">About us</div>
+          <ul id="footer-section-list">
+            <li><a href="#">Our Vision</a></li>
+            <li><a href="#">Our Logo</a></li>
+            <li><a href="#">Our Icons</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Why to choose us</a></li>
+          </ul>  
+          <hr class="visible-xs">
+        </section> <!-- end of section #about-us -->
+
+        <section id="services" class="col-lg-3 col-md-3 col-sm-3">
+          <div id="footer-heading">Services</div>
+          <ul id="footer-section-list">
+            <li><a href="#">Cardiology</a></li>
+            <li><a href="#">Cosmetic</a></li>
+            <li><a href="#">Dentistry</a></li>
+            <li><a href="#">Fertility</a></li>
+            <li><a href="#">Orthopedics</a></li>
+            <li><a href="#">Ophthalmology</a></li>
+            <li><a href="#">Wellness</a></li>
+            <li><a href="#">Others</a></li>
+          </ul>
+          <hr class="visible-xs">
+        </section> <!-- end of section #sevices -->
+
+        <section id="accounts" class="col-lg-3 col-md-3 col-sm-3">
+          <div id="footer-heading">Accounts</div>
+          <ul id="footer-section-list">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Create Account</a></li>
+            <li><a href="#">Your Completed Orders</a></li>
+          </ul>
+          <hr class="visible-xs">
+        </section> <!-- end of section #accounts -->
+      </div> <!-- End of div.row -->
+    </div> <!-- End of div.container -->
   </div> <!-- End of div.container -->
 </footer>
 
