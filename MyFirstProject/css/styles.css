@@ -1,12 +1,9 @@
 * {
 	 box-sizing: border-box;
 }
-
 body {
 	background-color: white;
-
 }
-
 
 /** HEADER **/
 #up-header-content {
@@ -31,7 +28,6 @@ body {
 	padding-bottom: 0px;
 	color: black;
 }
-
 #collapsable-nav {
 	margin-top: 35px;
 	margin-bottom: 10px; 
@@ -43,13 +39,13 @@ body {
 	padding-top: 20px;
 	background-color: #333;
 	border: 0;
+	position: relative;
+	padding-bottom: 0;
 }
-
 #footer-inner-container {
 	padding-right: 0;
 	padding-left: 0;
 	width: 92%;
-
 }
 #footer-heading  {
 	color: rgb(0, 160, 255);
@@ -72,15 +68,67 @@ body {
 	color: rgb(0, 160, 255);
 	text-decoration: none;
 }
-
+#socialmedia {
+	width: 264px;
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+}
+#socialmedia-div {
+	display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 4px;
+    padding: 0px;
+    width: 35px;
+    height: 35px;
+}
+#socialmedia-div > a > div{
+	width: 35px;
+    height: 35px;
+}
+#twitter {
+	background: url('../images/footer/twitter.png') no-repeat;
+}
+#twitter:hover {
+	background: url('../images/footer/twitter-blue.png') no-repeat;
+}
+#facebook {
+	background: url('../images/footer/facebook.png') no-repeat;
+}
+#facebook:hover {
+	background: url('../images/footer/facebook-blue.png') no-repeat;
+}
+#pinterest {
+	background: url('../images/footer/pint.png') no-repeat;
+}
+#pinterest:hover {
+	background: url('../images/footer/pint-blue.png') no-repeat;
+}
+#instagram {
+	background: url('../images/footer/web.png') no-repeat;
+}
+#instagram:hover {
+	background: url('../images/footer/web-blue.png') no-repeat;
+}
+#linkedin {
+	background: url('../images/footer/linked.png') no-repeat;
+}
+#linkedin:hover {
+	background: url('../images/footer/linked-blue.png') no-repeat;
+}
+#arrow {
+	background: url('../images/footer/arrow.png') no-repeat;
+}
+#arrow:hover {
+	background: url('../images/footer/arrow-blue.png') no-repeat;
+}
 /** END FOOTER **/
-
 
 /** MAIN CONTENT **/
 #banner {
 	position: relative;
 }
-
 #jumbotron-heading {
 	text-align: right;
 	color: white;
@@ -108,7 +156,6 @@ body {
 	margin-bottom: 0;
 	padding: 0;
 }
-
 #banner-div{
 	position: absolute;
 	bottom: 0;
@@ -157,7 +204,6 @@ body {
 	margin-bottom: 0;
 	padding: 15px;
 }
-
 #whyMedobal{
 	background-size: cover;
 	background-color: #11629c;
@@ -174,18 +220,61 @@ body {
 #icon-row > div, #icon-text-row > div {
 	width: 20%;
 }
-
-
-#star-icon div, #doctor-icon img, #globe-icon img, #accredit-icon img, #costsave-icon img{
+#star-icon span, #doctor-icon span, #globe-icon span, #accredit-icon span, #costsave-icon span{
 	display: block;
     margin-left: auto;
     margin-right: auto;
 }
 #star-icon-image {
-	background-image: url('../images/home/why-medobal-icons/star-icon-blue.png') no-repeat;
+	background: url('../images/home/why-medobal-icons/star-icon-blue.png') no-repeat;
+	width: 45px;
+	height: 43px;
 }
-
-
+#star-icon-image:hover {
+	background: url('../images/home/why-medobal-icons/star-icon.png') no-repeat;
+	width: 45px;
+	height: 43px;
+}
+#doctor-icon-image {
+	background: url('../images/home/why-medobal-icons/doctor-icon-blue.png') no-repeat;
+	width: 45px;
+	height: 48px;
+}
+#doctor-icon-image:hover {
+	background: url('../images/home/why-medobal-icons/doctor-icon.png') no-repeat;
+	width: 45px;
+	height: 48px;
+}
+#globe-icon-image {
+	background: url('../images/home/why-medobal-icons/globe-icon-blue.png') no-repeat;
+	width: 45px;
+	height: 45px;
+}
+#globe-icon-image:hover {
+	background: url('../images/home/why-medobal-icons/globe-icon.png') no-repeat;
+	width: 45px;
+	height: 45px;
+}
+#accredit-icon-image {
+	background: url('../images/home/why-medobal-icons/accredit-icon-blue.png') no-repeat;
+	width: 45px;
+	height: 56px;
+}
+#accredit-icon-image:hover {
+	background: url('../images/home/why-medobal-icons/accredit-icon.png') no-repeat;
+	width: 45px;
+	height: 56px;
+}
+#costsave-icon-image {
+	background: url('../images/home/why-medobal-icons/costsave-icon-blue.png') no-repeat;
+	width: 45px;
+	height: 42px;
+}
+#costsave-icon-image:hover {
+	background: url('../images/home/why-medobal-icons/costsave-icon.png') no-repeat;
+	width: 45px;
+	height: 42px;
+}
 #icon-text-uppercase{
 	text-align: center;
 	display: block;
@@ -197,7 +286,6 @@ body {
 	text-align: center;
 	display: block;
 	color: white;
-
 }
 
 /* Featured Procedure */ 
@@ -205,11 +293,9 @@ body {
 	padding-right: 0;
 	padding-left: 0;
 }
-
 #myProcedureCarousel > div.container {
 	background-color: white;
 }
-
 #featuredProcedureContent {
 	width: 47%;
 }
@@ -218,54 +304,25 @@ body {
 	padding-bottom: 40px;
 	width: 53%;
 }
-
-
 #featuredProcedureContent h2 {
 	color: #004c8f;
 	margin-bottom: 15px;
 	margin-top: 13px;
-	
-
 }
 #featuredProcedureContent p {
 	color: #777c83;
 	line-height: 1.6;
 	font-size: 15px;
 	padding-right: 18px;
-
-
 }
 #miniTitleFeatProc {
 	margin-top: 10px;
-	
-	
 }
 #featuredProcedureImage img{
 	box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.48);
 	width: 480;
 	height: 260;
 }
-
-/*.carousel-control .chevron-feat-proc {
-	color: #42aaf0;
-	height: 50px;
-	width: 30px;
-	font-size: 50px;
-
-}
-
-.procedure-carousel-control{
-	text-shadow: none;
-	background-color: white;
-}*/
-/*.procedure-carousel-control:focus, .procedure-carousel-control:hover {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    opacity: 0;
-    outline: 0px;
-}*/
-
-
 
 /* Need Help Support */ 
 #needHelpSupport {
@@ -280,7 +337,6 @@ body {
 	margin: 0;
 	margin-top: 14px;
 	margin-bottom: 14px;
-
 }
 
 /* QUOTE */
@@ -288,7 +344,6 @@ body {
 	background-color: #11629c;
 	background-size: cover;
 }
-
 #quote form {
 	display: block;
 	position: center;
@@ -310,7 +365,6 @@ body {
 	color: white;
 	margin-top: 7px;
 	margin-bottom: 7px;
-
 }
 .form-group {
 	border-radius: 15px;
@@ -319,7 +373,6 @@ body {
 	height: 34px;
 	width: 40px;
 	padding: 0;
-
 }
 .chevron-up-file{
 	color: #42aaf0;
@@ -328,11 +381,9 @@ body {
 	margin-bottom: 1.5px;
 	margin-left: 2.5px;
 }
-
 #uploadDocButtonDiv {
 	margin: 0;
 }
-
 .custom-file-upload > input[type="file"] {
     display: none;
 }
@@ -341,13 +392,11 @@ body {
     padding: 0;
     cursor: pointer;
 }
-
 #upload-button > label {
 	width: 40px;
 	height: 34px;
 	margin: 0;
 }
-
 #quote-submit-div {
 	margin-bottom: 15px;
 }
@@ -360,9 +409,7 @@ body {
 	height: 34px;
 	font-size: 1.2em;
 	text-align: center;
-
 }
-
 
 /* Blog Topics */
 #featuredBlogTopics {
@@ -373,7 +420,6 @@ body {
 #featuredBlogTopics-container {
 	width: 92%;
 }
-
 #featuredBlogTopics-title {
 	color: #11629c;
 	font-size: 20px;
@@ -390,10 +436,7 @@ body {
 	color: #11629c;
 	text-decoration: none;
 }
-
 /* End Blog Topics */ 
-
-
 /** END MAIN CONTENT **/
 
 
@@ -408,37 +451,23 @@ body {
 
 	/** FOOTER **/
 	.panel-footer section {
-		width: 20%;
+		width: 25%;
 	}
-	/** END FOOTER **/
-
-
-	/** MAIN CONTENT **/
-	
-	/** END MAIN CONTENT **/
- 
+	/** END FOOTER **/ 
 }
 
 /********** Medium devices only - md **********/
 @media (min-width: 992px) and (max-width: 1199px) {
 	/** FOOTER **/
 	.panel-footer section {
-		width: 20%;
+		width: 25%;
 	}
 	/** END FOOTER **/
-
-
-
-	/** MAIN CONTENT **/
-	/** END MAIN CONTENT **/
-
 }
 
 /********** Small devices only - sm **********/
 @media (min-width: 768px) and (max-width: 991px) {
- 	/** MAIN CONTENT **/
 	
-	/** END MAIN CONTENT **/
 }
 
 /********** Extra small devices only - xs **********/
@@ -449,15 +478,14 @@ body {
 		text-align: center;
 		width: 100%;
 	}
-	/** END HEADER **/ 
+	/** END HEADER **/
+
 	/** FOOTER **/
 	#home, #about_us, #services, #accounts {
 		text-align: center;
 	}
 	/** END FOOTER **/
-	  
 }
-
 
 
 
