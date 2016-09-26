@@ -3,6 +3,7 @@
 }
 
 body {
+	background-color: white;
 
 }
 
@@ -43,26 +44,33 @@ body {
 	background-color: #333;
 	border: 0;
 }
+
 #footer-inner-container {
+	padding-right: 0;
+	padding-left: 0;
 	width: 92%;
 
 }
 #footer-heading  {
 	color: rgb(0, 160, 255);
-	font-size: 1.3em;
-}
-
-
-#footer-heading > ul > li {
-	list-style-image: none;
-
+	font-size: 1.4em;
+	margin-bottom: 17px;
 }
 #footer-section-list {
 	list-style-type: none;
 	padding-left: 0;
 }
+#footer-section-list > li {
+	list-style-image: none;
+	margin-top: 5px;
+}
 #footer-section-list a {
 	color: white;
+	font-size: 15px;
+}
+#footer-section-list a:hover {
+	color: rgb(0, 160, 255);
+	text-decoration: none;
 }
 
 /** END FOOTER **/
@@ -168,11 +176,15 @@ body {
 }
 
 
-#star-icon img, #doctor-icon img, #globe-icon img, #accredit-icon img, #costsave-icon img{
+#star-icon div, #doctor-icon img, #globe-icon img, #accredit-icon img, #costsave-icon img{
 	display: block;
     margin-left: auto;
     margin-right: auto;
 }
+#star-icon-image {
+	background-image: url('../images/home/why-medobal-icons/star-icon-blue.png') no-repeat;
+}
+
 
 #icon-text-uppercase{
 	text-align: center;
@@ -189,8 +201,9 @@ body {
 }
 
 /* Featured Procedure */ 
-#featuredProcedure, #myProcedureCarousel {
-	
+#featuredBlogTopics-container {
+	padding-right: 0;
+	padding-left: 0;
 }
 
 #myProcedureCarousel > div.container {
@@ -258,7 +271,7 @@ body {
 #needHelpSupport {
 	background-color: #3ea5ea;
 	background-size: cover;
-	height: 60px;
+	/*height: 60px;*/
 }
 #needHelp {
 	text-align: center;
@@ -267,6 +280,7 @@ body {
 	margin: 0;
 	margin-top: 14px;
 	margin-bottom: 14px;
+
 }
 
 /* QUOTE */
@@ -362,14 +376,19 @@ body {
 
 #featuredBlogTopics-title {
 	color: #11629c;
-	font-size: 18px;
+	font-size: 20px;
 	margin-bottom: 10px;
 }
 #blogTopics {
-	margin-top: 3px;
+	margin-top: 5px;
+	font-size: 15px;
 }
 #blogTopics a{
 	color: black;
+}
+#blogTopics a:hover {
+	color: #11629c;
+	text-decoration: none;
 }
 
 /* End Blog Topics */ 
@@ -387,30 +406,30 @@ body {
 		width: 1020px;
 	}
 
-	/** MAIN CONTENT **/
-	/*#featuredProcedureContent {
-		width: 47%;
+	/** FOOTER **/
+	.panel-footer section {
+		width: 20%;
 	}
-	#featuredProcedureImage {
-		width: 53%;
-	}	*/
+	/** END FOOTER **/
+
+
+	/** MAIN CONTENT **/
+	
 	/** END MAIN CONTENT **/
  
 }
 
 /********** Medium devices only - md **********/
 @media (min-width: 992px) and (max-width: 1199px) {
+	/** FOOTER **/
+	.panel-footer section {
+		width: 20%;
+	}
+	/** END FOOTER **/
+
+
+
 	/** MAIN CONTENT **/
-	#featuredProcedureImage img{
-		/*width: 460;
-		height: 249;*/
-	}
-	/*#featuredProcedureContent {
-		width: 47%;
-	}
-	#featuredProcedureImage {
-		width: 53%;
-	}	*/
 	/** END MAIN CONTENT **/
 
 }
