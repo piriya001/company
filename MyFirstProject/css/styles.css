@@ -126,6 +126,8 @@ body {
 /** END FOOTER **/
 
 /** MAIN CONTENT **/
+
+/* Banner */
 #banner {
 	position: relative;
 }
@@ -204,6 +206,8 @@ body {
 	margin-bottom: 0;
 	padding: 15px;
 }
+
+/* Why Medobal */
 #whyMedobal{
 	background-size: cover;
 	background-color: #11629c;
@@ -289,12 +293,61 @@ body {
 }
 
 /* Featured Procedure */ 
-#featuredBlogTopics-container {
-	padding-right: 0;
-	padding-left: 0;
+
+#featProc-carousel-div {
+	position: relative;
 }
-#myProcedureCarousel > div.container {
+.carousel-control.left {
+	position: absolute;
+	width: 25px;
+	left: -45px;	
+}
+#carousel-arrow-left{
+	position: relative;
+	background: url('../images/home/featured/left-arrow.png') no-repeat;
+	width: 25px;
+	height: 50px;
+	background-size: cover;
+	background-position: center;
+	top: 139.5px;
+}
+#carousel-arrow-left:hover{
+	position: relative;
+	background: url('../images/home/featured/left-arrow-blue.png') no-repeat;
+	width: 25px;
+	height: 50px;
+	background-size: cover;
+	background-position: center;
+	top: 139.5px;
+}
+.carousel-control.right {
+	position: absolute;
+	width: 25px;
+	right: -40px;	
+}
+#carousel-arrow-right{
+	position: relative;
+	background: url('../images/home/featured/right-arrow.png') no-repeat;
+	width: 25px;
+	height: 50px;
+	background-size: cover;
+	background-position: center;
+	top: 139.5px;
+}
+#carousel-arrow-right:hover{
+	position: relative;
+	background: url('../images/home/featured/right-arrow-blue.png') no-repeat;
+	width: 25px;
+	height: 50px;
+	background-size: cover;
+	background-position: center;
+	top: 139.5px;
+}
+.my-carousel-control.carousel-control.left, .my-carousel-control.carousel-control.right {
 	background-color: white;
+	opacity: 1;
+	text-shadow: 0 0 0 rgba(0,0,0,0);
+	background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 0%);
 }
 #featuredProcedureContent {
 	width: 47%;
@@ -324,6 +377,9 @@ body {
 	height: 260;
 }
 
+
+
+
 /* Need Help Support */ 
 #needHelpSupport {
 	background-color: #3ea5ea;
@@ -337,6 +393,29 @@ body {
 	margin: 0;
 	margin-top: 14px;
 	margin-bottom: 14px;
+}
+
+/* Featured Procedure */ 
+#featDest-carousel-div {
+	position: relative;
+}
+#miniTitleFeatDest {
+	margin-top: 10px;
+}
+#featuredDestinationImage h2 {
+	color: #004c8f;
+	margin-bottom: 15px;
+	margin-top: 13px;
+	text-transform: uppercase;
+}
+#featuredDestinationPic {
+	padding-bottom: 40px;
+	padding-left: 0;
+	/* width: 53%; */
+}
+#featuredDestinationPic img{
+	width: 420;
+	height: 230;
 }
 
 /* QUOTE */
@@ -412,13 +491,15 @@ body {
 }
 
 /* Blog Topics */
+#featuredBlogTopics-container {
+	padding-right: 0;
+	padding-left: 0;
+	width: 92%;
+}
 #featuredBlogTopics {
 	background-color: #dfe0e2;
 	padding-top: 10px;
 	padding-bottom: 15px;
-}
-#featuredBlogTopics-container {
-	width: 92%;
 }
 #featuredBlogTopics-title {
 	color: #11629c;
@@ -436,7 +517,8 @@ body {
 	color: #11629c;
 	text-decoration: none;
 }
-/* End Blog Topics */ 
+/* End Blog Topics */
+
 /** END MAIN CONTENT **/
 
 
@@ -486,7 +568,6 @@ body {
 	}
 	/** END FOOTER **/
 }
-
 
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
