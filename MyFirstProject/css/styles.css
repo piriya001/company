@@ -28,7 +28,7 @@ body {
 	padding-bottom: 0px;
 	color: black;
 }
-#collapsable-nav {
+#collapsable-nav {	
 	margin-top: 35px;
 	margin-bottom: 10px; 
 }
@@ -293,7 +293,6 @@ body {
 }
 
 /* Featured Procedure */ 
-
 #featProc-carousel-div {
 	position: relative;
 }
@@ -402,7 +401,11 @@ body {
 #miniTitleFeatDest {
 	margin-top: 10px;
 }
+#featuredDestinationImage {
+	width: 47%;
+}
 #featuredDestinationImage h2 {
+	
 	color: #004c8f;
 	margin-bottom: 15px;
 	margin-top: 13px;
@@ -417,6 +420,23 @@ body {
 	width: 420;
 	height: 230;
 }
+#featuredDestinationContent {
+	width: 53%;
+	margin-bottom: 40px;
+}
+#featuredDestinationListDiv {
+	margin-top: 91px;
+	height: 230px;
+}
+#featuredDestinationList{
+	padding-left: 0px;
+	list-style-type: none;
+}
+#featuredDestinationList > li{
+	font-size: 16px;
+	margin-bottom: 17px;
+}
+
 
 /* QUOTE */
 #quote {
