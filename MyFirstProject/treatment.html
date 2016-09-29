@@ -1,9 +1,284 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medobal</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
 <body>
-<h2>hello this is treatment page</h2>
+<header>
+  <nav id="header-nav" class="navbar navbar-default">
+  
+    <div id="up-header" class="hidden-xs">
+      <div id="up-header-content" class="container">
+        <p id="support" class="pull-right">Support +91 744 9199 744</p>
+      </div>
+    </div> <!-- End of div #up-header-->
+
+    <div id="main-header" class="container">
+        <div id="logo-header" class="navbar-header">
+          <a href="index.html" class="pull-left"> 
+            <div id="logo-img" alt="Logo image"></div>
+          </a> 
+
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div> <!-- End of div.navebar-header -->
+        <div id="collapsable-nav" class="collapse navbar-collapse pull-left">
+        <nav role="navigation">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li id="cardiology-button"><a href="#">Cardiology</a></li>
+            <li id="cosmetic-button"><a href="#">Cosmetic</a></li>
+            <li id="dentistry-button"><a href="#">Dentistry</a></li>
+            <li id="fertility-button"><a href="#">Fertility</a></li>
+            <li id="orthopedics-button"><a href="#">Orthopedics</a></li>
+            <li id="ophthalmology-button"><a href="#">Ophthalmology</a></li>
+            <li id="wellness-button"><a href="#">Wellness</a></li>
+            <li id="others-button"><a href="#">Others</a></li>
+          </ul>
+        </nav>
+        </div>    
+      </div> <!-- End of div #main-header -->
+      
+  </nav> <!-- End of nav #header-nav -->
+</header>
+
+<div id="main-content" class="main-content">
+  
+	<section id="treatmentCategory">
+	    <div class="container">
+	      <p id="needHelp">Need help? &nbsp; Call&nbsp;our&nbsp;support&nbsp;team&nbsp;at&nbsp;+91&nbsp;744&nbsp;9199&nbsp;744</p>
+	    </div> 
+	</section> <!-- End of section #needHelpSupport -->
+
+  <section id="quote">
+    <div class="container">
+        <h3 id="quote-header">Let us know your requirement</h3>
+        <form>
+   <!--       <div class="container"> -->
+            <div class="row">
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" id="firstName" placeholder="First name">
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" id="lastName" placeholder="Last name">
+              </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <select class="form-control" id="country" placeholder="country">
+                  <option>country</option>
+                  <option>country 1</option>
+                  <option>country 2</option>
+                  <option>country 3</option>
+                  <option>country 4</option>
+                </select>
+              </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <select class="form-control" id="state" placeholder="state">
+                  <option>State</option>
+                </select>
+              </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" id="address01" placeholder="Address 01">
+              </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" id="address02" placeholder="Address 02">
+              </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="tel" class="form-control" id="phone" placeholder="Phone">
+              </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="email" class="form-control" id="email" placeholder="Email">
+              </div>
+
+              <div id="secOpinionDiv" class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <span class="col-lg-7 col-md-7 col-sm-7 col-xs-7">Second Opinion Needed</span>
+                <label class="checkbox-inline col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <input type="checkbox" id="secOpinionYes" value="option1"><span>Yes</span> 
+                </label>
+                <label class="checkbox-inline col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <input type="checkbox" id="secOpinionNo" value="option2"><span>No</span>
+                </label>
+              </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <select class="form-control" id="chooseDest" placeholder="Choose your Destination">
+                  <option>Choose your Destination</option>
+                </select>
+              </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <select class="form-control" id="medDefect" placeholder="Medical Disease/Defect">
+                  <option>Medical Disease/Defect</option>
+                </select>
+              </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <select class="form-control" id="medTreatment" placeholder="Medical Treatment">
+                  <option>Medical Treatment</option>
+                </select>
+              </div>
+
+              <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <textarea class="form-control" rows="6" placeholder="Medical Description"></textarea>
+              </div>
+
+              <div id="uploadDocDiv" class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div id="uploadDocLabelDiv" class="col-lg-5 col-md-5 col-sm-6 col-xs-9">Upload Documents</div>
+
+                <div id="uploadDocButtonDiv" class="form-group col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                  <button for="file-upload" id="upload-button" type="button" class="btn btn-default btn-lg">
+                    <label class="custom-file-upload">
+                        <input id="file-upload" type="file"/>
+                        
+                          <span class="glyphicon glyphicon-chevron-up chevron-up-file"></span>
+                    </label>      
+                  </button>  
+                </div> <!-- End of div #uploadDocButtonDiv -->
+
+              </div> <!-- End of div #uploadDocDiv -->
+
+              <div id="quote-submit-div" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <button id="quote-submit" type="submit" class="btn btn-default col-lg-4 col-md-4 col-sm-4 col-xs-6">SUBMIT</button>
+              </div>  
+
+            </div> <!-- End of div.row -->
+    <!--      </div> --><!-- End of div.container -->
+        </form> <!-- End of from -->
+      </div> <!-- End of div.container -->
+  </section> <!-- End of div #quote -->
+
+  <section id="featuredBlogTopics">
+    <div class="container">
+      <div id="featuredBlogTopics-container" class="container">      
+        <div id="featuredBlogTopics-title">Featured Blog Topics</div>
+        <div class="row">
+          <div id="blogTopics" class="col-lg-6 col-md-6 col-sm-6">
+            <a href="#">What is Cataract?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6 col-sm-6">
+            <a href="#">What is Plastic surgery?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6 col-sm-6">
+            <a href="#">What are the symptoms of cataract?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6 col-sm-6">
+            <a href="#">Who can undergo Cosmetic surgery?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6 col-sm-6">
+            <a href="#">How to treat cataract?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6 col-sm-6">
+            <a href="#">Does cosmetic surgery require age limit?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6 col-sm-6">
+            <a href="#">Does cataract attract all age people?</a>
+          </div>
+          <div id="blogTopics" class="col-lg-6 col-md-6 col-sm-6">
+            <a href="#">What are the famous cosmetic surgeries?</a>
+          </div>
+        </div> <!-- End of div.row -->
+      </div> <!-- End of div.container #featuredBlogTopics-container-->
+    </div> <!-- End of div.container -->
+  </section> <!-- End of section #featuredBlogTopics -->
+
+</div> <!-- End of div #main-content -->
+
+<footer class="panel-footer">
+  <div id="footer-container" class="container">
+    <div id="footer-inner-container" class="container">
+
+      <div class="row">
+        <section id="home" class="col-lg-2 col-md-2 col-sm-3">
+          <div id="footer-heading">Home</div>
+          <ul id="footer-section-list">
+            <li><a href="#featuredProcedure">Featured Procedures</a></li>
+            <li><a href="#">Featured Destinations</a></li>
+            <li><a href="#quote">Get a Quote</a></li>
+            <li><a href="#">Featured Blog Topics</a></li>
+          </ul>
+        <hr class="visible-xs">
+        </section> <!-- end of section #home -->
+
+        <section id="about_us" class="col-lg-2 col-md-2 col-sm-3">
+          <div id="footer-heading">About us</div>
+          <ul id="footer-section-list">
+            <li><a href="#">Our Vision</a></li>
+            <li><a href="#">Our Logo</a></li>
+            <li><a href="#">Our Icons</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Why to choose us</a></li>
+          </ul>  
+          <hr class="visible-xs">
+        </section> <!-- end of section #about-us -->
+
+        <section id="services" class="col-lg-2 col-md-2 col-sm-3">
+          <div id="footer-heading">Services</div>
+          <ul id="footer-section-list">
+            <li><a href="#">Cardiology</a></li>
+            <li><a href="#">Cosmetic</a></li>
+            <li><a href="#">Dentistry</a></li>
+            <li><a href="#">Fertility</a></li>
+            <li><a href="#">Orthopedics</a></li>
+            <li><a href="#">Ophthalmology</a></li>
+            <li><a href="#">Wellness</a></li>
+            <li><a href="#">Others</a></li>
+          </ul>
+          <hr class="visible-xs">
+        </section> <!-- end of section #sevices -->
+
+        <section id="accounts" class="col-lg-2 col-md-2 col-sm-3">
+          <div id="footer-heading">Accounts</div>
+          <ul id="footer-section-list">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Create Account</a></li>
+            <li><a href="#">Your Completed Orders</a></li>
+          </ul>
+          <hr class="visible-xs">
+        </section> <!-- end of section #accounts -->
+
+        <section id="socialmedia" class="col-lg-2 col-md-2 col-sm-3 hidden-xs" >
+          <div id="socialmedia-div" class="col-lg-2 col-md-2 col-sm-2">
+            <a href=""><div id="twitter"></div></a>
+          </div>
+          <div id="socialmedia-div" class="col-lg-2 col-md-2 col-sm-2">
+            <a href="https://www.facebook.com/Medobal/" target="_blank"><div id="facebook"></div></a>
+          </div>
+          <div id="socialmedia-div" class="col-lg-2 col-md-2 col-sm-2">
+            <a href=""><div id="pinterest"></div></a>
+          </div>
+          <div id="socialmedia-div" class="col-lg-2 col-md-2 col-sm-2">
+            <a href=""><div id="instagram"></div></a>
+          </div>
+          <div id="socialmedia-div" class="col-lg-2 col-md-2 col-sm-2">
+            <a href=""><div id="linkedin"></div></a>
+          </div>
+          <div id="socialmedia-div" class="col-lg-2 col-md-2 col-sm-2">
+            <a href=""><div id="arrow"></div></a>
+          </div>
+        </section> <!-- end of section #socialmedia -->
+      </div> <!-- End of div.row -->
+    </div> <!-- End of div.container -->
+  </div> <!-- End of div.container -->
+</footer>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/ajax-utils.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
