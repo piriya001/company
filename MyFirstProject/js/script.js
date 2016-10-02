@@ -30,10 +30,6 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	var dc = {}; //namespace
 
 	//Convenience function for inserting innner HTML for 'select'
-	// ==> convenience method, so we dont have to write this from scratch every time because we are goint to have to do this several times. 
-	// ==> If you give me a selector and you give me the HTML, I will go ahead and take, select that selector.
-	// ==> Take that argument, grab that element I should say, the target element, and set its inner HTML to whatever the HTML string that you send me.
-	// ==> So this is just a convenience method to say, insertHTtml, pass it a selector, and the HTML string and it will insert it into the target element.
 	var insertHtml = function (selector, html) {
 		var targetElem = document.querySelector(selector);
 		targetElem.innerHTML = html;
