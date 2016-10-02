@@ -18,7 +18,11 @@ $(function () { //Same as document.addEventListener(DOMContentLoaded"...
 	$("#navbarToggle").click(function (event) {
 		$(event.target).focus();
 	});
+
+	$("banner").load("/snippets/home/featureProcedure-snippet/featuredProcedure-snippet.html");
 });
+
+
 
 //IIFE
 (function (global) {

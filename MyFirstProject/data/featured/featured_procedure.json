@@ -1,10 +1,8 @@
-[{"id":1, "treatment_name":"", "category": "Cardiology", "description":"", "url": ""}
-{"id":2, "treatment_name":"", "category": "Cardiology", "description":"", "url": ""}
-{"id":3, "treatment_name":"", "category": "Cardiology", "description":"", "url": ""}
-{"id":4, "treatment_name":"", "category": "Cardiology", "description":"", "url": ""}
-{"id":5, "treatment_name":"", "category": "Cardiology", "description":"", "url": ""}]
-
-
+[{"id":1,"name":"Abdominoplasty","category":"Cosmetic","description":"A full tummy tuck requires a horizontally-oriented incision in the area between the pubic hairline and belly button. The shape and length of the incision will be determined by the amount of excess skin. Once the abdominal skin is lifted, the underlying weakened abdominal muscles are repaired. A second incision around the navel may be necessary to remove excess skin in the upper abdomen. "},
+{"id":2,"name":"Crowns","category":"Dentistry","description":"A crown is used to entirely cover or "},
+{"id":3,"name":"Laminectomy","category":"Orthopedics","description":"Laminectomy is surgery that creates space by removing the lamina — the back part of the vertebra that covers your spinal canal. Also known as decompression surgery, laminectomy enlarges your spinal canal to relieve pressure on the spinal cord or nerves."},
+{"id":4,"name":"Trabeculectomy","category":"Ophthalmology","description":"Trabeculectomy is a standard surgery for lowering pressure inside the eye. It reduces the eye pressure by draining aqueous humour from the eye. Trabeculectomy surgery creates a new drainage site to help filter internal fluid from the eye."},
+{"id":5,"name":"Fontan procedure","category":"Cardiology","description":"The Fontan procedure is the third of three surgeries (following the Norwood procedure and Glenn shunt) used to treat a severe form of congenital heart disease called hypoplastic left heart syndrome. A Fontan procedure is an operation done for children who have abnormal hearts and cannot have their hearts repaired with two pumping chambers (ventricles)."}]
 
 
 
